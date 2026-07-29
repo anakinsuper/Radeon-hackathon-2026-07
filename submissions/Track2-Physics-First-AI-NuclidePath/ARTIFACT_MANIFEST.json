@@ -1,0 +1,62 @@
+{
+  "schema_version": "nuclidepath-submission-manifest-2.0",
+  "release_evidence": {
+    "controller_dependency_light": "216 passed, 13 skipped",
+    "controller_pytorch": "231 passed",
+    "amd_rocm": "231 passed",
+    "amd_final_snapshot_sha256": "b2f20aadad8559deeba738ff2273fe10c3b48e945615f8105540fdd3b7a9ebe5",
+    "amd_physics_benchmark_revision": "5edb8ce24b690810efad703f7550650192598118"
+  },
+  "artifacts": [
+    {
+      "path": "submission/NuclidePath_Track2_Deck.pptx",
+      "bytes": 728123,
+      "sha256": "7c27b39fcbe31cb8a47df2814b81ab8fb68041323645d360b63f6adbbb0f245e"
+    },
+    {
+      "path": "submission/NuclidePath_Project_Specification.pdf",
+      "bytes": 232198,
+      "sha256": "07439b877c7db3957850363fdf87f5cf990b5d67ca2e8ee34f21de4dc198e5c2"
+    },
+    {
+      "path": "docs/assets/architecture.svg",
+      "bytes": 8394,
+      "sha256": "83623166f04871b9abc111c6739423802d9df2c8a77563cefd5a492e9b0e7cb7"
+    },
+    {
+      "path": "docs/assets/dashboard.png",
+      "bytes": 153828,
+      "sha256": "8f6eb9e3f862f661ee5ff8be3efaac527d14584f74d513af1a9fd439ed6d3b0f"
+    },
+    {
+      "path": "docs/assets/uncertainty-dashboard.png",
+      "bytes": 163676,
+      "sha256": "5f068f9035363aee05c9f7cc081488d2d1fd03bf9de3689e5e3cd136a551a313"
+    },
+    {
+      "path": "docs/assets/deck-contact.png",
+      "bytes": 434695,
+      "sha256": "8e75c0ccdfb6ed85a47b37fb038e3a6c0bb8f2cc3919a1feb769192476809b31"
+    },
+    {
+      "path": "docs/assets/spec-contact.png",
+      "bytes": 540235,
+      "sha256": "89c98603a246631c011d6a548555b6663b7b1bc4f0dc8097fe3a9315de847dc2"
+    },
+    {
+      "path": "docs/assets/video-contact.png",
+      "bytes": 284526,
+      "sha256": "1a0d7aec3f98779c74130b960eec7ab7453d3ef0b4385d8d008e4a3043b55259"
+    },
+    {
+      "path": "artifacts/amd-2026-07-28/platform-current/preflight.txt",
+      "bytes": 879,
+      "sha256": "22db5f9ab8e6e6548cba678d00029be58e691d2dd5a1beb99fd1ca33195c7f95"
+    },
+    {
+      "path": "artifacts/amd-2026-07-28/platform-current/test-results.txt",
+      "bytes": 340,
+      "sha256": "3774cb6620c7e2df73def4a4671da1157be1a54a662b7d400635ddaf3ab61a05"
+    }
+  ]
+}
