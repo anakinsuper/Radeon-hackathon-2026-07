@@ -54,7 +54,7 @@ nuclear-emergency-demo --samples 128 --output results/demo
 nuclear-emergency-dashboard --host 127.0.0.1 --port 8080 --samples 128
 ```
 
-The submission manifest verifies ten current editorial, screenshot and AMD evidence artifacts. The clean wheel includes the primary-paper rock validation dataset used by the dashboard.
+The contest-local manifest verifies the deck and specification copied into this folder. The source release retains a separate ten-entry evidence manifest covering screenshots and AMD runtime evidence. The clean wheel includes the primary-paper rock validation dataset used by the dashboard.
 
 ## Scientific scope
 
