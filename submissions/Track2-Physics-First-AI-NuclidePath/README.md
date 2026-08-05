@@ -12,7 +12,7 @@ NuclidePath is a private, physics-first AI agent for traceable Cs-137 groundwate
 
 | Item | URL |
 |---|---|
-| Source code | <https://github.com/anakinsuper/NuclidePath> |
+| Source code | [`source/`](./source/) — complete current tree copied from private `main` (release `c1cd1f2`) |
 | Demo video | `VIDEO_URL_PENDING_UPLOAD` |
 | Project specification | [`NuclidePath_Project_Specification.pdf`](./NuclidePath_Project_Specification.pdf) |
 | Presentation deck | [`NuclidePath_Track2_Deck.pptx`](./NuclidePath_Track2_Deck.pptx) |
@@ -54,8 +54,10 @@ nuclear-emergency-demo --samples 128 --output results/demo
 nuclear-emergency-dashboard --host 127.0.0.1 --port 8080 --samples 128
 ```
 
-The contest-local manifest verifies the deck and specification copied into this folder. The source release retains a separate ten-entry evidence manifest covering screenshots and AMD runtime evidence. The clean wheel includes the primary-paper rock validation dataset used by the dashboard.
+The contest-local manifest (`nuclidepath-contest-manifest-2.0`) verifies the deck, specification and the complete source copy under `source/`. The source copy is a clean current-`main` tree (release `c1cd1f2`) excluding `.git`, `.venv`, `node_modules`, `build`, `dist`, `results` and `private-deliverables`. The private `main` retains the separate ten-entry evidence manifest covering screenshots and AMD runtime evidence. The clean wheel includes the primary-paper rock validation dataset used by the dashboard.
 
 ## Scientific scope
 
 NuclidePath is a transparent research screening demonstration—not an operational emergency-response system, dose model or site-validated digital twin. The primary Cs GCS covers K/Na competition on three illite site types and NH4 only on frayed-edge sites. Sr-90 remains a provenance-bearing linear-Kd path; unsupported Sr/Ca/Mg coefficients are not invented. The rock reconstructions are paper-input predictions, not digitized experimental validation. The local LLM never generates or modifies physical values.
+
+The current `main` also includes an opt-in PHREEQC multicomponent chemistry bridge (schema `nuclidepath-phreeqc-chemistry-2`) with an independent arithmetic oracle, K-free Central Oklahoma Na-Ca-Mg fixtures and a dependency-free traceable Cs calibration/hold-out gate. PHREEQC remains **PROCESS-QUALIFIED ONLY**: no calibrated multi-cation Cs chemistry, experimental agreement, GCS equivalence or regulatory validity is claimed. The demo video shows the canonical core Track 2 path and does not display the optional PHREEQC bridge.

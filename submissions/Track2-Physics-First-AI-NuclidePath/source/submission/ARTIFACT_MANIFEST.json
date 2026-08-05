@@ -1,0 +1,177 @@
+{
+  "schema_version": "nuclidepath-submission-manifest-2.0",
+  "release_evidence": {
+    "controller_dependency_light": "216 passed, 13 skipped",
+    "controller_pytorch": "231 passed",
+    "amd_rocm": "231 passed",
+    "amd_final_snapshot_sha256": "b2f20aadad8559deeba738ff2273fe10c3b48e945615f8105540fdd3b7a9ebe5",
+    "amd_physics_benchmark_revision": "5edb8ce24b690810efad703f7550650192598118"
+  },
+  "artifacts": [
+    {
+      "path": "submission/NuclidePath_Track2_Deck.pptx",
+      "bytes": 240015,
+      "sha256": "a2074cdecbe7e88f95210611246913cbe0a41a3e6f2c95270b0ecbee8343b1ff"
+    },
+    {
+      "path": "submission/NuclidePath_Project_Specification.pdf",
+      "bytes": 267354,
+      "sha256": "751de4ace49f080aa9b45aa73d45f10c4fe1dfb367437bcd56b4771b507e685c"
+    },
+    {
+      "path": "docs/assets/architecture.svg",
+      "bytes": 8394,
+      "sha256": "83623166f04871b9abc111c6739423802d9df2c8a77563cefd5a492e9b0e7cb7"
+    },
+    {
+      "path": "docs/assets/dashboard.png",
+      "bytes": 153828,
+      "sha256": "8f6eb9e3f862f661ee5ff8be3efaac527d14584f74d513af1a9fd439ed6d3b0f"
+    },
+    {
+      "path": "docs/assets/uncertainty-dashboard.png",
+      "bytes": 163676,
+      "sha256": "5f068f9035363aee05c9f7cc081488d2d1fd03bf9de3689e5e3cd136a551a313"
+    },
+    {
+      "path": "docs/assets/deck-contact.png",
+      "bytes": 578038,
+      "sha256": "2438913f820f08ea2301958876bf1999c83661399cb580c345a46ed0b28ec5ad"
+    },
+    {
+      "path": "docs/assets/spec-contact.png",
+      "bytes": 988490,
+      "sha256": "6c8d796e647b731425c3347ec5d458d2d1b3fdb81adb294da52e00fa8a8b048e"
+    },
+    {
+      "path": "docs/assets/video-contact.png",
+      "bytes": 385012,
+      "sha256": "aab5898be47dcf798341dd8f6af40a290fbcc51e21e4f766422335672359e690"
+    },
+    {
+      "path": "artifacts/amd-2026-07-28/platform-current/preflight.txt",
+      "bytes": 879,
+      "sha256": "22db5f9ab8e6e6548cba678d00029be58e691d2dd5a1beb99fd1ca33195c7f95"
+    },
+    {
+      "path": "artifacts/amd-2026-07-28/platform-current/test-results.txt",
+      "bytes": 340,
+      "sha256": "3774cb6620c7e2df73def4a4671da1157be1a54a662b7d400635ddaf3ab61a05"
+    },
+    {
+      "path": "private-deliverables/current-video-assets/slide-01.png",
+      "bytes": 55204,
+      "sha256": "d80f38ea5a2412cf6a06e9b87274b740387a7ec3e83d9c257c97712bc0226c8b"
+    },
+    {
+      "path": "private-deliverables/current-video-assets/slide-03.png",
+      "bytes": 68470,
+      "sha256": "65c131d534f4bb0f86883242ac22fb1758cc7bd941a5f61e228d70cd372922a6"
+    },
+    {
+      "path": "private-deliverables/current-video-assets/slide-05.png",
+      "bytes": 80828,
+      "sha256": "320e1318c2cd0265989bf5724da233ed37d461c1a7173e27f44ec123bd56387c"
+    },
+    {
+      "path": "private-deliverables/current-video-assets/slide-06.png",
+      "bytes": 88937,
+      "sha256": "f097bf86f6edbf6fb899662c0763dd5740570901400b6e4c9f977e83295f01b8"
+    },
+    {
+      "path": "private-deliverables/current-video-assets/slide-08.png",
+      "bytes": 82251,
+      "sha256": "c445e80bedd158c22e635e0851f910b6f98d19b5964e890cedc620527b4ec904"
+    },
+    {
+      "path": "private-deliverables/current-video-assets/slide-09.png",
+      "bytes": 75932,
+      "sha256": "79fbb919bb8d0ce394c112e079bdd3184fce4b404f7fb1aeaac71519575967c2"
+    }
+  ],
+  "source_context": {
+    "repository": "anakinsuper/NuclidePath",
+    "visibility": "private",
+    "default_branch": "main",
+    "current_feature_state": "PHREEQC schema 2 multicomponent bridge with independent arithmetic oracle, K-free Na-Ca-Mg fixtures and dependency-free traceable Cs calibration/hold-out gate; canonical transport unchanged; separate EPA/Fuller/Dubus external Cs benchmark registry with calibration_eligible=false",
+    "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
+    "public_contest_branch_source_release": "2b256e322eaa8ca45a5b939fdecad09d66019b0c",
+    "public_contest_branch_status": "synchronized to current main source release; complete source copied into contest package; public video URL pending",
+    "artifact_generation_base": "a94c76ee078a7bd24feb98965a6682a274781deb",
+    "current_main_head_policy": "fetch refs/heads/main directly; documentation-only merges may advance the branch",
+    "last_code_bearing_main_checkpoint": "2b256e322eaa8ca45a5b939fdecad09d66019b0c (PR #24 merge; PR head 58656141db4a3a17d49a7e0a2f9ffda20f434130; fetch refs/heads/main directly for current documentation HEAD)",
+    "public_contest_branch_artifact_root": "submissions/Track2-Physics-First-AI-NuclidePath/"
+  },
+  "verification_checkpoints": {
+    "latest_non_runner_scientific_gate_ci": {
+      "pr": 22,
+      "run_id": "30936374478",
+      "result": "370 passed, 15 skipped",
+      "workflow_policy": "PASS",
+      "wheel": "PASS",
+      "whitespace": "PASS"
+    },
+    "preceding_multicomponent_bridge_ci": {
+      "pr": 15,
+      "run_id": "30928408962",
+      "result": "364 passed, 15 skipped",
+      "workflow_policy": "PASS",
+      "wheel": "PASS",
+      "whitespace": "PASS"
+    },
+    "documentation_followup_ci": {
+      "pr": 10,
+      "run_id": "30864898692",
+      "result": "356 passed, 15 skipped"
+    },
+    "amd_core_platform_snapshot": {
+      "date": "2026-07-28",
+      "result": "231 passed",
+      "scope": "recorded core-platform workload, not a post-merge full-main rerun"
+    },
+    "phreeqc": {
+      "example2": "process-qualified record",
+      "central_oklahoma_multicomponent": "trusted real run pending"
+    },
+    "visual_artifacts": {
+      "deck_sha256": "a2074cdecbe7e88f95210611246913cbe0a41a3e6f2c95270b0ecbee8343b1ff",
+      "specification_pdf_sha256": "751de4ace49f080aa9b45aa73d45f10c4fe1dfb367437bcd56b4771b507e685c",
+      "scope": "current source documentation and core Track 2 visual package; PHREEQC bridge explicitly labelled but not shown in the video"
+    },
+    "historical_documentation_ci": {
+      "scope": "Historical checkpoint; documentation-only merges may advance main. Fetch main and Actions for current state.",
+      "pr": 20,
+      "run_id": "30933311424",
+      "result": "364 passed, 15 skipped",
+      "workflow_policy": "PASS",
+      "wheel": "PASS",
+      "whitespace": "PASS"
+    },
+    "latest_non_runner_registry_ci": {
+      "pr": 24,
+      "head": "58656141db4a3a17d49a7e0a2f9ffda20f434130",
+      "run_id": "30993946602",
+      "result": "373 passed, 15 skipped",
+      "workflow_policy": "PASS",
+      "compilation": "PASS",
+      "wheel": "PASS",
+      "whitespace": "PASS",
+      "scope": "external Cs benchmark registry only; no calibration promotion and no trusted PHREEQC run"
+    }
+  },
+  "submission_state": {
+    "video_url": "VIDEO_URL_PENDING_UPLOAD",
+    "human_gates": [
+      "eligibility confirmation",
+      "judge-accessible video URL",
+      "final review of official contest PR after video URL insertion"
+    ]
+  },
+  "artifact_generation": {
+    "deck": "npm run deck",
+    "specification_pdf": "scripts/generate_spec_pdf_fallback.py; Playwright browser unavailable in this container",
+    "current_video_assets": "python3 scripts/generate_current_video_assets.py",
+    "contact_sheets": "soffice conversion + Poppler rendering + ImageMagick montage",
+    "visual_qa": "PDF rendered with Poppler and inspected on all 8 pages; deck/spec/video contact sheets inspected"
+  }
+}

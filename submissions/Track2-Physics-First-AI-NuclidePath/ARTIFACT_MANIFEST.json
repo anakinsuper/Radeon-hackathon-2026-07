@@ -1,16 +1,35 @@
 {
-  "schema_version": "nuclidepath-contest-manifest-1.0",
-  "source_release": "1a4137d6db3ce2915b607caf6d906e606d09ea45",
-  "artifacts": [
+  "schema_version": "nuclidepath-contest-manifest-2.0",
+  "source_release": "c1cd1f2",
+  "contest_artifacts": [
     {
       "path": "NuclidePath_Project_Specification.pdf",
-      "bytes": 232198,
-      "sha256": "07439b877c7db3957850363fdf87f5cf990b5d67ca2e8ee34f21de4dc198e5c2"
+      "bytes": 267354,
+      "sha256": "751de4ace49f080aa9b45aa73d45f10c4fe1dfb367437bcd56b4771b507e685c"
     },
     {
       "path": "NuclidePath_Track2_Deck.pptx",
-      "bytes": 728123,
-      "sha256": "7c27b39fcbe31cb8a47df2814b81ab8fb68041323645d360b63f6adbbb0f245e"
+      "bytes": 240015,
+      "sha256": "a2074cdecbe7e88f95210611246913cbe0a41a3e6f2c95270b0ecbee8343b1ff"
     }
-  ]
+  ],
+  "source_context": {
+    "repository": "anakinsuper/NuclidePath",
+    "visibility": "private",
+    "default_branch": "main",
+    "current_feature_state": "PHREEQC schema 2 multicomponent bridge with independent arithmetic oracle, K-free Na-Ca-Mg fixtures and dependency-free traceable Cs calibration/hold-out gate; canonical transport unchanged; separate EPA/Fuller/Dubus external Cs benchmark registry with calibration_eligible=false",
+    "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
+    "complete_source_copied": true,
+    "source_copy_location": "submissions/Track2-Physics-First-AI-NuclidePath/source/",
+    "source_copy_release": "c1cd1f2 (current main docs head after PR #24/#25)",
+    "notes": "source copy excludes .git, .venv, node_modules, build, dist, results, private-deliverables"
+  },
+  "submission_state": {
+    "video_url": "VIDEO_URL_PENDING_UPLOAD",
+    "human_gates": [
+      "eligibility confirmation",
+      "judge-accessible video URL",
+      "final review of official contest PR after video URL insertion"
+    ]
+  }
 }
