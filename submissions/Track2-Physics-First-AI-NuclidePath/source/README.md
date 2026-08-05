@@ -10,12 +10,11 @@ Team: **Physics-First AI** · Application: **NuclidePath**
 > K-free Central Oklahoma fixtures, dynamic per-ion diagnostics and report
 > integration, the dependency-free traceable Cs calibration/hold-out gate, and
 > the separate EPA/Fuller/Dubus external Cs benchmark registry.
-> PR #24 merged as `2b256e322eaa8ca45a5b939fdecad09d66019b0c`; its CI run
-> `30993946602` passed with `373 passed, 15 skipped`.
+> The latest GitHub-hosted CI gate passed with `373 passed, 15 skipped`.
 > This is GitHub-hosted CI evidence. A **post-merge AMD/ROCm rerun of the full
-> current `main` tree** (5 August 2026, head `13eb2c8`) passed **388 tests,
+> current `main` tree** (5 August 2026) passed **388 tests,
 > 2 skipped** (external-PHREEQC only) under `artifacts/amd-2026-08-05/post-merge/`.
-> The PR #22 calibration-gate evidence remains historical non-runner evidence
+> The calibration-gate evidence remains historical non-runner evidence
 > for that specific gate.
 
 > NuclidePath uses a local LLM to plan and explain. Every physical value is produced by a deterministic, versioned Python tool with explicit inputs, units, assumptions, provenance and uncertainty.
@@ -108,19 +107,19 @@ nuclear-emergency-demo \
   --session-id offline-demo
 ```
 
-Latest code-bearing registry check (PR #24; not a post-merge AMD rerun):
+Latest code-bearing registry check (GitHub-hosted CI):
 
 ```text
-373 passed, 15 skipped (external Cs registry integration CI; run 30993946602)
+373 passed, 15 skipped (external Cs registry integration)
 ```
 
-The preceding calibration/hold-out gate remains PR #22, run 30936374478:
+The preceding calibration/hold-out gate:
 370 passed, 15 skipped.
 
 Preceding merged-bridge integration checkpoint:
 
 ```text
-364 passed, 15 skipped (schema-2 bridge integration CI; run 30928408962)
+364 passed, 15 skipped (schema-2 bridge integration)
 ```
 
 Core-platform evidence snapshot:

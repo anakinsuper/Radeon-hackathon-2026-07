@@ -234,7 +234,7 @@ Measured AMD `transport-prototype-0.2` runtime checkpoint:
 - full 128-sample LLM-planned pipeline: `1.007 s`;
 - LLM and offline physical `runs`: identical.
 
-The preceding integration gate for the merged multicomponent bridge is PR #15 run `30928408962`: 364 passed, 15 skipped, workflow policy PASS, wheel PASS and whitespace PASS. The latest non-runner calibration-gate integration is PR #22 run `30936374478`: 370 passed, 15 skipped, with the same technical checks. The AMD ROCm evidence includes the dated 28 July core-platform snapshot at 231 passed with exact FP64 primary-GCS/platform parity, plus a **5 August post-merge full-`main` rerun at 388 passed, 2 skipped** (only external-PHREEQC) under `artifacts/amd-2026-08-05/post-merge/`.
+The preceding integration gate for the merged multicomponent bridge passed `364` tests, `15` skipped, with workflow policy, wheel and whitespace checks PASS. The latest non-runner calibration-gate integration passed `370` tests, `15` skipped, with the same technical checks. The AMD ROCm evidence includes the dated 28 July core-platform snapshot at 231 passed with exact FP64 primary-GCS/platform parity, plus a **5 August post-merge full-`main` rerun at 388 passed, 2 skipped** (only external-PHREEQC) under `artifacts/amd-2026-08-05/post-merge/`.
 
 ## 11. Verification
 
@@ -284,6 +284,11 @@ All project acceptance criteria are met when:
 - README, specification, video script and slide deck are in English;
 - public contest publication is not marked complete while the source fork is stale or the video URL is a placeholder.
 
-## Current PR #24 registry checkpoint
+## External Cs benchmark registry checkpoint
 
-PR #24 added the separate EPA/Fuller/Dubus external Cs benchmark registry. It merged into `main` as `2b256e322eaa8ca45a5b939fdecad09d66019b0c`; its GitHub-hosted CI run `30993946602` passed with `373 passed, 15 skipped`, including workflow policy, compilation, wheel and whitespace checks. This is not a trusted self-hosted PHREEQC run, an AMD post-merge rerun, or scientific calibration evidence.
+The repository includes a separate EPA/Fuller/Dubus external Cs benchmark
+registry with source digests, CSV integrity checks and
+`calibration_eligible: false`. Its GitHub-hosted CI gate passed with
+`373 passed, 15 skipped`, including workflow policy, compilation, wheel and
+whitespace checks. This is not a trusted self-hosted PHREEQC run, an AMD
+post-merge rerun, or scientific calibration evidence.
