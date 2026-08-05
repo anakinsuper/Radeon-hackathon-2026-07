@@ -87,10 +87,11 @@ require the participant's explicit publication or eligibility decision.
 - [x] Private source repository verified: `anakinsuper/NuclidePath`.
 - [x] Public contest fork and prepared branch exist; contest artifacts are under
       `submissions/Track2-Physics-First-AI-NuclidePath/`.
-- [ ] Prepared contest branch synchronized with current `main`; its manifest
-      still identifies source release
-      `1a4137d6db3ce2915b607caf6d906e606d09ea45`.
-- [x] Complete current source copied to the contest submission.
+- [x] Prepared contest branch synchronized with current `main` documentation head
+      `c1cd1f2` (code-bearing checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24);
+      its contest-local manifest is `nuclidepath-contest-manifest-2.0`.
+- [x] Complete current source copied to the contest submission under
+      `submissions/Track2-Physics-First-AI-NuclidePath/source/`.
 - [ ] Official contest PR opened with the exact title.
 - [ ] Official PR checks and final public links reviewed.
 

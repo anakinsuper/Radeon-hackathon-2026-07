@@ -10,13 +10,13 @@
   "artifacts": [
     {
       "path": "submission/NuclidePath_Track2_Deck.pptx",
-      "bytes": 240015,
-      "sha256": "a2074cdecbe7e88f95210611246913cbe0a41a3e6f2c95270b0ecbee8343b1ff"
+      "bytes": 728152,
+      "sha256": "41bf468a1a6bddc8f237ffbd9c23f8766d4332934ad23f1dedcb20dd8c711c86"
     },
     {
       "path": "submission/NuclidePath_Project_Specification.pdf",
-      "bytes": 267354,
-      "sha256": "751de4ace49f080aa9b45aa73d45f10c4fe1dfb367437bcd56b4771b507e685c"
+      "bytes": 268885,
+      "sha256": "6ef98975d513cacdfc1ff0f8ce29067ac39527718afb60d81d76fdbc7da64d57"
     },
     {
       "path": "docs/assets/architecture.svg",
@@ -60,8 +60,8 @@
     },
     {
       "path": "private-deliverables/current-video-assets/slide-01.png",
-      "bytes": 55204,
-      "sha256": "d80f38ea5a2412cf6a06e9b87274b740387a7ec3e83d9c257c97712bc0226c8b"
+      "bytes": 54509,
+      "sha256": "196a7697b79e4360d2117ed2dfc919017b8cfdfa636e589ddc626970eda94c5d"
     },
     {
       "path": "private-deliverables/current-video-assets/slide-03.png",
@@ -80,8 +80,8 @@
     },
     {
       "path": "private-deliverables/current-video-assets/slide-08.png",
-      "bytes": 82251,
-      "sha256": "c445e80bedd158c22e635e0851f910b6f98d19b5964e890cedc620527b4ec904"
+      "bytes": 81639,
+      "sha256": "569a9e9e6e03cb75260b727d6b3de6f820527727a39b3fa943e0f8ce2b5c1967"
     },
     {
       "path": "private-deliverables/current-video-assets/slide-09.png",
@@ -95,8 +95,8 @@
     "default_branch": "main",
     "current_feature_state": "PHREEQC schema 2 multicomponent bridge with independent arithmetic oracle, K-free Na-Ca-Mg fixtures and dependency-free traceable Cs calibration/hold-out gate; canonical transport unchanged; separate EPA/Fuller/Dubus external Cs benchmark registry with calibration_eligible=false",
     "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
-    "public_contest_branch_source_release": "2b256e322eaa8ca45a5b939fdecad09d66019b0c",
-    "public_contest_branch_status": "synchronized to current main source release; complete source copied into contest package; public video URL pending",
+    "public_contest_branch_source_release": "c1cd1f2 (current main documentation head; code-bearing checkpoint 2b256e322eaa8ca45a5b939fdecad09d66019b0c)",
+    "public_contest_branch_status": "synchronized to current main source release; complete source copied into contest package under submissions/Track2-Physics-First-AI-NuclidePath/source/; contest-local manifest v2.0; public video URL pending",
     "artifact_generation_base": "a94c76ee078a7bd24feb98965a6682a274781deb",
     "current_main_head_policy": "fetch refs/heads/main directly; documentation-only merges may advance the branch",
     "last_code_bearing_main_checkpoint": "2b256e322eaa8ca45a5b939fdecad09d66019b0c (PR #24 merge; PR head 58656141db4a3a17d49a7e0a2f9ffda20f434130; fetch refs/heads/main directly for current documentation HEAD)",

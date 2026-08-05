@@ -222,6 +222,16 @@ the checkpoint they support.
 ## Next project gate
 
 The private documentation, submission package and non-runner PHREEQC remediation are synchronized in `main`; documentation-only merges after PR #22 do not change the reviewed code path. Fetch `main` directly for the current state.
+The public contest-fork branch
+`submission/track2-physics-first-ai-nuclidepath` was synchronized on 2026-08-05
+to the current `main` documentation head `c1cd1f2` (code-bearing checkpoint
+`2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24): the complete current
+source is copied under `submissions/Track2-Physics-First-AI-NuclidePath/source/`
+(clean tree, excluding `.git`, `.venv`, `node_modules`, `build`, `dist`,
+`results` and `private-deliverables`), the specification PDF and deck are the
+current `main` artifacts, and the contest-local manifest is
+`nuclidepath-contest-manifest-2.0`. The public video URL remains the only
+missing submission link.
 The deadline-critical human-gated items remain due **6 August 2026, 17:59 CEST**:
 
 1. confirm eligibility and AMD programme requirements;

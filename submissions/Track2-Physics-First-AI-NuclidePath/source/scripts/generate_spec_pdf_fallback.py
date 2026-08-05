@@ -211,7 +211,7 @@ def cover_story() -> list:
     story.extend([
         Spacer(1, 9 * mm),
         Table([
-            [Paragraph("5/5", COVER_STAT), Paragraph("231", COVER_STAT), Paragraph("356/15", COVER_STAT), Paragraph("0", COVER_STAT)],
+            [Paragraph("5/5", COVER_STAT), Paragraph("231", COVER_STAT), Paragraph("373/15", COVER_STAT), Paragraph("0", COVER_STAT)],
             [Paragraph("Track 2 capabilities", COVER_LABEL), Paragraph("AMD core snapshot", COVER_LABEL), Paragraph("latest PR gate", COVER_LABEL), Paragraph("cloud calls", COVER_LABEL)],
         ], colWidths=[44.5 * mm] * 4, style=TableStyle([
             ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#17212b")),

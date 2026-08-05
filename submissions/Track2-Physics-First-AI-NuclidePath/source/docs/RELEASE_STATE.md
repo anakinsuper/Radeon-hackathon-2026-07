@@ -86,10 +86,12 @@ checkpoint explicitly named in those documents.
 The private source repository is not judge-accessible by itself. The prepared
 public contest-fork branch
 `anakinsuper/Radeon-hackathon-2026-07:submission/track2-physics-first-ai-nuclidepath`
-exists, but its manifest identifies source release
-`1a4137d6db3ce2915b607caf6d906e606d09ea45`, before the current PHREEQC
-multicomponent merge. It is not treated as a current submission snapshot and
-was not modified by this documentation change.
+is synchronized to the current `main` documentation head `c1cd1f2` (code-bearing
+checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24). Its contest
+package now contains the complete current source under
+`submissions/Track2-Physics-First-AI-NuclidePath/source/`, the updated
+specification PDF and deck, and the contest-local manifest
+`nuclidepath-contest-manifest-2.0`.
 
 The internal deck/PDF/video package is a core Track 2 evidence package. The
 video is 4:36, 1920×1080, 30 fps, H.264/AAC with embedded English subtitles;
