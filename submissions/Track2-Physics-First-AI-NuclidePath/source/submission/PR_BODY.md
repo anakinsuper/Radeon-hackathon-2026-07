@@ -52,12 +52,20 @@ experimental dataset is bundled and no promotion claim is made.
 
 ### AMD deployment evidence
 
-The AMD evidence is a dated core-platform snapshot from 28 July 2026:
+The AMD evidence includes a dated core-platform snapshot from 28 July 2026:
 ROCm 7.2.1, HIP `llama.cpp`, Qwen3.5-9B-Q8_0, all model layers offloaded,
 and 231 tests passed on the recorded AMD workspace. The exact FP64
 device-resident primary-GCS → transport → receptor pipeline evaluated 147,456
 concentrations in a 1.784 ms median, 137.09× faster than scalar, with
 maximum relative concentration error `7.94e-14`.
+
+A **post-merge AMD/ROCm rerun of the full current `main` tree** was executed on
+5 August 2026 (gfx1100, ROCm 7.2.1, torch `2.9.1+gitff65f5b`, head `b6d4c61e74`):
+**388 tests passed, 2 skipped** (only the external-PHREEQC solver tests), with
+the FP64 platform benchmark reproducing 1.82 ms median / 132.8× speedup /
+`7.94e-14` max error. Evidence is archived under
+`artifacts/amd-2026-08-05/post-merge/` with SHA-256 digests.
+All 13 PyTorch/ROCm tests skipped in the dependency-light CI pass on the AMD GPU.
 
 The preceding merged-bridge integration checkpoint is PR #15 CI run
 [30928408962](https://github.com/anakinsuper/NuclidePath/actions/runs/30928408962):

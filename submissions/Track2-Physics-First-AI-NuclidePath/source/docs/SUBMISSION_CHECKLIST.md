@@ -69,8 +69,11 @@ require the participant's explicit publication or eligibility decision.
 
 ## AMD and demo evidence
 
-- [x] AMD core-platform snapshot: 231 tests, exact FP64 parity and recorded
+- [x] AMD core-platform snapshot (28 July): 231 tests, exact FP64 parity and recorded
       ROCm/model/source hashes.
+- [x] Post-merge AMD/ROCm rerun of full current `main` (5 August): 388 passed,
+      2 skipped (external-PHREEQC only), FP64 benchmark reproduced; evidence under
+      `artifacts/amd-2026-08-05/post-merge/`.
 - [x] Dependency-light controller checkpoint: 216 passed/13 optional-PyTorch
       skips; PyTorch controller checkpoint: 231 passed.
 - [x] Current core video master: 4:36, 1920×1080, 30 fps, H.264/AAC with

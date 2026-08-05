@@ -4,8 +4,8 @@
   "contest_artifacts": [
     {
       "path": "NuclidePath_Project_Specification.pdf",
-      "bytes": 268885,
-      "sha256": "6ef98975d513cacdfc1ff0f8ce29067ac39527718afb60d81d76fdbc7da64d57"
+      "bytes": 268951,
+      "sha256": "c89e5162a10e84e3d0804abd11089b7cf3fd3c05dc74ac3f8bd5c729b51ffc4f"
     },
     {
       "path": "NuclidePath_Track2_Deck.pptx",
@@ -21,7 +21,7 @@
     "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
     "complete_source_copied": true,
     "source_copy_location": "submissions/Track2-Physics-First-AI-NuclidePath/source/",
-    "source_copy_release": "b6d4c61 (current main head after PR #24/#25 + consistency fixes)",
+    "source_copy_release": "c05d13a (current main head incl. post-merge AMD evidence)",
     "notes": "source copy excludes .git, .venv, node_modules, build, dist, results, private-deliverables"
   },
   "submission_state": {

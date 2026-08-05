@@ -234,7 +234,7 @@ Measured AMD `transport-prototype-0.2` runtime checkpoint:
 - full 128-sample LLM-planned pipeline: `1.007 s`;
 - LLM and offline physical `runs`: identical.
 
-The preceding integration gate for the merged multicomponent bridge is PR #15 run `30928408962`: 364 passed, 15 skipped, workflow policy PASS, wheel PASS and whitespace PASS. The latest non-runner calibration-gate integration is PR #22 run `30936374478`: 370 passed, 15 skipped, with the same technical checks. The AMD ROCm evidence remains the dated 28 July core-platform snapshot at 231 passed with exact FP64 primary-GCS/platform parity; it predates the PHREEQC bridge merge and is not a full current-main rerun.
+The preceding integration gate for the merged multicomponent bridge is PR #15 run `30928408962`: 364 passed, 15 skipped, workflow policy PASS, wheel PASS and whitespace PASS. The latest non-runner calibration-gate integration is PR #22 run `30936374478`: 370 passed, 15 skipped, with the same technical checks. The AMD ROCm evidence includes the dated 28 July core-platform snapshot at 231 passed with exact FP64 primary-GCS/platform parity, plus a **5 August post-merge full-`main` rerun at 388 passed, 2 skipped** (only external-PHREEQC) under `artifacts/amd-2026-08-05/post-merge/`.
 
 ## 11. Verification
 

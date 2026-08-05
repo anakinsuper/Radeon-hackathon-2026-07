@@ -5,7 +5,8 @@
     "controller_pytorch": "231 passed",
     "amd_rocm": "231 passed",
     "amd_final_snapshot_sha256": "b2f20aadad8559deeba738ff2273fe10c3b48e945615f8105540fdd3b7a9ebe5",
-    "amd_physics_benchmark_revision": "5edb8ce24b690810efad703f7550650192598118"
+    "amd_physics_benchmark_revision": "5edb8ce24b690810efad703f7550650192598118",
+    "amd_postmerge_rerun": "388 passed, 2 skipped (external-PHREEQC only); 5 Aug 2026, head b6d4c61e74"
   },
   "artifacts": [
     {
@@ -15,8 +16,8 @@
     },
     {
       "path": "submission/NuclidePath_Project_Specification.pdf",
-      "bytes": 268885,
-      "sha256": "6ef98975d513cacdfc1ff0f8ce29067ac39527718afb60d81d76fdbc7da64d57"
+      "bytes": 268951,
+      "sha256": "c89e5162a10e84e3d0804abd11089b7cf3fd3c05dc74ac3f8bd5c729b51ffc4f"
     },
     {
       "path": "docs/assets/architecture.svg",
@@ -87,6 +88,31 @@
       "path": "private-deliverables/current-video-assets/slide-09.png",
       "bytes": 75932,
       "sha256": "79fbb919bb8d0ce394c112e079bdd3184fce4b404f7fb1aeaac71519575967c2"
+    },
+    {
+      "path": "artifacts/amd-2026-08-05/post-merge/platform-fp64.json",
+      "bytes": 1670,
+      "sha256": "bafc935803f41d1a3928c253c5fb6fce859bb4a9a51e8e6d51e4a58c1b8eb9c6"
+    },
+    {
+      "path": "artifacts/amd-2026-08-05/post-merge/preflight.txt",
+      "bytes": 329,
+      "sha256": "d24551f984cde7085dac7a1b22c8dd4bc1458a914233798125d3065956ea2628"
+    },
+    {
+      "path": "artifacts/amd-2026-08-05/post-merge/primary-gcs-fp64.json",
+      "bytes": 910,
+      "sha256": "2911d7d4ebac7a1aa1492ca602dcca782924884b053d4a0cd9d697865ebeb40b"
+    },
+    {
+      "path": "artifacts/amd-2026-08-05/post-merge/test-results.txt",
+      "bytes": 192,
+      "sha256": "afa969ef5ede80134503ebbdfbc9a300feb53f59d3ffcd37cb7b2b9db71578b9"
+    },
+    {
+      "path": "artifacts/amd-2026-08-05/post-merge/SHA256SUMS",
+      "bytes": 336,
+      "sha256": "cb56f1d7c789a4de4661a4fdf39c4f4999c322fa93a0f4498d64d8b6f144a1d4"
     }
   ],
   "source_context": {

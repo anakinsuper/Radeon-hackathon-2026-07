@@ -1,6 +1,6 @@
 # AMD ROCm scientific platform benchmark
 
-**Scope note:** this is the dated 28 July 2026 core-platform snapshot. It predates the multicomponent PHREEQC bridge merge and is not a full rerun of current `main`.
+**Scope note:** this is the dated 28 July 2026 core-platform snapshot. It predates the multicomponent PHREEQC bridge merge; the **5 August 2026 post-merge full-`main` rerun** (388 passed, 2 skipped; FP64 benchmark reproduced) is archived under `artifacts/amd-2026-08-05/post-merge/`.
 
 ## Verified environment
 

@@ -222,6 +222,7 @@ the checkpoint they support.
 ## Next project gate
 
 The private documentation, submission package and non-runner PHREEQC remediation are synchronized in `main`; documentation-only merges after PR #22 do not change the reviewed code path. Fetch `main` directly for the current state.
+A **post-merge AMD/ROCm rerun of the full current `main` tree** was executed on 2026-08-05 on the AMD workspace (gfx1100, ROCm 7.2.1, torch `2.9.1+gitff65f5b`, head `b6d4c61e74`): **388 passed, 2 skipped** (only the external-PHREEQC solver tests), with the FP64 platform benchmark reproducing 1.82 ms median / 132.8× / 7.94e-14 max error. Evidence under `artifacts/amd-2026-08-05/post-merge/` with SHA256SUMS.
 The public contest-fork branch
 `submission/track2-physics-first-ai-nuclidepath` was synchronized on 2026-08-05
 to the current `main` documentation head `c1cd1f2` (code-bearing checkpoint

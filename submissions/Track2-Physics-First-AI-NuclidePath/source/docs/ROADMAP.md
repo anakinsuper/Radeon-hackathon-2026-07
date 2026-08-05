@@ -4,7 +4,7 @@
 - **Hackathon:** AMD AI DevMaster Hackathon 2026 · Track 2
 - **Current core version:** `transport-prototype-0.3`
 - **Submission deadline:** 6 August 2026, 17:59 CEST
-- **Current source state:** generalized PHREEQC multicomponent bridge, independent arithmetic oracle, dependency-free traceable Cs calibration/hold-out gate and separate external Cs benchmark registry are merged in PR #24 (merge `2b256e322eaa8ca45a5b939fdecad09d66019b0c`). Its latest integration gate is run `30993946602` (373 passed, 15 skipped); the calibration/hold-out gate is PR #22 run `30936374478` (370 passed, 15 skipped). The AMD 231-test evidence is a dated core-platform snapshot, not a full rerun of the current `main` tree.
+- **Current source state:** generalized PHREEQC multicomponent bridge, independent arithmetic oracle, dependency-free traceable Cs calibration/hold-out gate and separate external Cs benchmark registry are merged in PR #24 (merge `2b256e322eaa8ca45a5b939fdecad09d66019b0c`). Its latest integration gate is run `30993946602` (373 passed, 15 skipped); the calibration/hold-out gate is PR #22 run `30936374478` (370 passed, 15 skipped). A **post-merge AMD/ROCm rerun of the full current `main` tree** (5 Aug 2026, head `b6d4c61e74`) passed **388 tests, 2 skipped** (only external-PHREEQC), with the FP64 platform benchmark reproducing 1.82 ms median / 132.8× / 7.94e-14 max error under `artifacts/amd-2026-08-05/post-merge/`.
 
 ## Guiding principle
 
@@ -20,7 +20,7 @@ NuclidePath is expanded by making evidence, deterministic physics, and reproduci
 - [x] Opt-in PHREEQC chemistry bridge: declared water composition, CEC, Cs plus one or more K/Na/Ca/Mg exchange coefficients, deterministic multicomponent input compilation, selected-output parsing, bounded execution and replay; still `PROCESS-QUALIFIED ONLY`.
 - [x] Offline Cs exchange calibration gate: traceable dataset schema, group-disjoint calibration/hold-out split, transparent apparent-Kd fit, acceptance metrics and fail-closed promotion; no experimental dataset is bundled.
 - [x] Historical AMD `0.2` checkpoint: Qwen3.5-9B Q8 with llama.cpp/HIP on `gfx1100`, all layers offloaded; retained as explicitly historical evidence.
-- [x] AMD/ROCm evidence: historical 152-test/LLM/surrogate artifacts retained separately; the dated 28 July core-platform snapshot passes 231 tests and records exact FP64 primary-GCS → receptor parity and throughput under `artifacts/amd-2026-07-28/platform-current/`; it is not a full rerun of the current `main` tree.
+- [x] AMD/ROCm evidence: historical 152-test/LLM/surrogate artifacts retained separately; the dated 28 July core-platform snapshot passes 231 tests and records exact FP64 primary-GCS → receptor parity and throughput under `artifacts/amd-2026-07-28/platform-current/`; the **post-merge full-current-`main` rerun (5 Aug) passes 388 tests, 2 skipped** under `artifacts/amd-2026-08-05/post-merge/`.
 - [x] Prepared contest fork branch is synchronized to current `main` documentation head `c1cd1f2` (code-bearing checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24); complete source is copied into the contest package under `submissions/Track2-Physics-First-AI-NuclidePath/source/` with contest-local manifest `nuclidepath-contest-manifest-2.0`.
 - [ ] Hosted judge-accessible video link, complete-source accessibility and official submission PR.
 

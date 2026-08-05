@@ -61,7 +61,7 @@ The current model is a transparent screening prototype, not a regulatory or oper
 | Generation benchmark | `67.66 ± 0.14 tokens/s` at 128 tokens (`0.3` rerun) |
 | Full LLM-planned pipeline | `19.9692 s` for the verified `0.3` 128-sample AMD run; `0.0635364 s` deterministic offline baseline |
 
-The final AMD/ROCm **core-platform evidence snapshot** (28 July 2026) passed 231 tests. The exact FP64 device-resident GCS→transport→receptor pipeline evaluated 147,456 concentrations in a 1.784 ms median, 137.09× faster than the canonical scalar reference, with `7.94e-14` maximum relative concentration error. The dependency-light controller gate was 216 pass/13 optional-PyTorch skips; the controller with CPU PyTorch passed 231. This snapshot predates the PHREEQC bridge merge and is not a full rerun of current `main`. See [AMD platform benchmark](docs/AMD_PLATFORM_BENCHMARK.md) and [AMD LLM benchmark](docs/AMD_LLM_BENCHMARK.md).
+The final AMD/ROCm **core-platform evidence snapshot** (28 July 2026) passed 231 tests. The exact FP64 device-resident GCS→transport→receptor pipeline evaluated 147,456 concentrations in a 1.784 ms median, 137.09× faster than the canonical scalar reference, with `7.94e-14` maximum relative concentration error. The dependency-light controller gate was 216 pass/13 optional-PyTorch skips; the controller with CPU PyTorch passed 231. A **post-merge full-`main` AMD/ROCm rerun (5 August 2026) passed 388 tests, 2 skipped** (only the external-PHREEQC tests), with the FP64 platform benchmark reproducing 1.82 ms median / 132.8× / `7.94e-14` max error under `artifacts/amd-2026-08-05/post-merge/`. See [AMD platform benchmark](docs/AMD_PLATFORM_BENCHMARK.md) and [AMD LLM benchmark](docs/AMD_LLM_BENCHMARK.md).
 
 ## Architecture
 

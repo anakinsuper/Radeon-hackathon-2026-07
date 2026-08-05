@@ -67,16 +67,30 @@ The AMD/ROCm evidence under
 `artifacts/amd-2026-07-28/platform-current/` is a core scientific/platform
 snapshot: source revision `5edb8ce24b690810efad703f7550650192598118`, ROCm
 7.2.1, exact FP64 GCS-to-transport-to-receptor parity, and 231 passed tests.
-It predates the PHREEQC documentation/bridge merges and therefore does not
-claim to be a full rerun of the current `main` tree.
+It predates the PHREEQC documentation/bridge merges and is retained as the
+historical core-platform snapshot.
+
+A **post-merge AMD/ROCm rerun of the full current `main` tree** was executed on
+2026-08-05 under `artifacts/amd-2026-08-05/post-merge/`: source head
+`b6d4c61e74`, ROCm 7.2.1 (HIP `7.2.53211-e1a6bc5663`), torch `2.9.1+gitff65f5b`,
+gfx1100, 51.5 GB VRAM. The complete suite passed **388 tests, 2 skipped**
+(the 2 skips are the external-PHREEQC tests requiring the real solver, not
+AMD-related). All 13 PyTorch/ROCm tests that are skipped in the dependency-light
+CI now pass on the AMD GPU. The FP64 platform benchmark reproduced the July
+numbers: 1.82 ms median, **132.8×** speedup versus scalar, **7.94e-14** maximum
+relative error, 81.1 M evaluations/s. Primary-GCS batch: 4.88× speedup,
+4.44e-16 maximum relative error. SHA-256 digests are recorded in
+`SHA256SUMS` inside that directory.
 
 The latest core test counts are:
 
 - dependency-light controller: 216 passed, 13 optional-PyTorch skips;
 - controller with PyTorch: 231 passed;
-- AMD ROCm core snapshot: 231 passed;
+- AMD ROCm core snapshot (28 July): 231 passed;
+- **AMD ROCm full current-`main` post-merge rerun (5 August): 388 passed, 2 skipped** (external-PHREEQC only);
 - merged multicomponent bridge integration gate: 364 passed, 15 skipped (run `30928408962`);
-- non-runner calibration/hold-out gate integration: 370 passed, 15 skipped (run `30936374478`).
+- non-runner calibration/hold-out gate integration: 370 passed, 15 skipped (run `30936374478`);
+- external Cs registry integration: 373 passed, 15 skipped (run `30993946602`).
 
 Historical counts in the AMD LLM and video records remain valid only for the
 checkpoint explicitly named in those documents.
