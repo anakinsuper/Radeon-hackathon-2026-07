@@ -11,8 +11,8 @@
   "artifacts": [
     {
       "path": "submission/NuclidePath_Track2_Deck.pptx",
-      "bytes": 728152,
-      "sha256": "41bf468a1a6bddc8f237ffbd9c23f8766d4332934ad23f1dedcb20dd8c711c86"
+      "bytes": 728166,
+      "sha256": "524552f96c9d7645c305eb2566129ff69ea2afff4577e4b2bbc6c09f23ebee2f"
     },
     {
       "path": "submission/NuclidePath_Project_Specification.pdf",
@@ -113,6 +113,11 @@
       "path": "artifacts/amd-2026-08-05/post-merge/SHA256SUMS",
       "bytes": 336,
       "sha256": "cb56f1d7c789a4de4661a4fdf39c4f4999c322fa93a0f4498d64d8b6f144a1d4"
+    },
+    {
+      "path": "submission/NuclidePath_Track2_Deck.pdf",
+      "bytes": 470875,
+      "sha256": "02dd1bd93b3cd1ea93ea76c7fa624b9a9e8616ec26324d59decad72fc7c8e89c"
     }
   ],
   "source_context": {
@@ -121,7 +126,7 @@
     "default_branch": "main",
     "current_feature_state": "PHREEQC schema 2 multicomponent bridge with independent arithmetic oracle, K-free Na-Ca-Mg fixtures and dependency-free traceable Cs calibration/hold-out gate; canonical transport unchanged; separate EPA/Fuller/Dubus external Cs benchmark registry with calibration_eligible=false",
     "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
-    "public_contest_branch_source_release": "c1cd1f2 (current main documentation head; code-bearing checkpoint 2b256e322eaa8ca45a5b939fdecad09d66019b0c)",
+    "public_contest_branch_source_release": "13eb2c8 (current main documentation head; code-bearing checkpoint 2b256e322eaa8ca45a5b939fdecad09d66019b0c)",
     "public_contest_branch_status": "synchronized to current main source release; complete source copied into contest package under submissions/Track2-Physics-First-AI-NuclidePath/source/; contest-local manifest v2.0; public video URL pending",
     "artifact_generation_base": "a94c76ee078a7bd24feb98965a6682a274781deb",
     "current_main_head_policy": "fetch refs/heads/main directly; documentation-only merges may advance the branch",

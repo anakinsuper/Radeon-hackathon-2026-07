@@ -12,9 +12,11 @@ Team: **Physics-First AI** · Application: **NuclidePath**
 > the separate EPA/Fuller/Dubus external Cs benchmark registry.
 > PR #24 merged as `2b256e322eaa8ca45a5b939fdecad09d66019b0c`; its CI run
 > `30993946602` passed with `373 passed, 15 skipped`.
-> This is GitHub-hosted CI evidence, not a trusted self-hosted PHREEQC or AMD
-> post-merge rerun. The PR #22 calibration-gate evidence remains historical
-> non-runner evidence for that specific gate.
+> This is GitHub-hosted CI evidence. A **post-merge AMD/ROCm rerun of the full
+> current `main` tree** (5 August 2026, head `13eb2c8`) passed **388 tests,
+> 2 skipped** (external-PHREEQC only) under `artifacts/amd-2026-08-05/post-merge/`.
+> The PR #22 calibration-gate evidence remains historical non-runner evidence
+> for that specific gate.
 
 > NuclidePath uses a local LLM to plan and explain. Every physical value is produced by a deterministic, versioned Python tool with explicit inputs, units, assumptions, provenance and uncertainty.
 

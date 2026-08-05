@@ -1,9 +1,9 @@
 # NuclidePath current release state
 
-**Updated:** 4 August 2026  
+**Updated:** 5 August 2026  
 **Repository:** `anakinsuper/NuclidePath`  
 **Default branch:** `main`  
-**Latest code-bearing `main` checkpoint:** PR #24 registry merge `2b256e322eaa8ca45a5b939fdecad09d66019b0c` (PR head `58656141db4a3a17d49a7e0a2f9ffda20f434130`)
+**Latest code-bearing `main` checkpoint:** PR #24 registry merge `2b256e322eaa8ca45a5b939fdecad09d66019b0c` (PR head `58656141db4a3a17d49a7e0a2f9ffda20f434130`); the post-merge AMD/ROCm evidence commit `c05d13afbf` is documentation/evidence only and does not change the reviewed code path.
 **Documentation-only synchronization follows the last code-bearing checkpoint; fetch `main` directly for the current documentation HEAD.**
 **Artifact-generation source checkpoint:** `a94c76ee078a7bd24feb98965a6682a274781deb` (PR #10 documentation sync)
 
@@ -100,7 +100,7 @@ checkpoint explicitly named in those documents.
 The private source repository is not judge-accessible by itself. The prepared
 public contest-fork branch
 `anakinsuper/Radeon-hackathon-2026-07:submission/track2-physics-first-ai-nuclidepath`
-is synchronized to the current `main` documentation head `c1cd1f2` (code-bearing
+is synchronized to the current `main` documentation head `13eb2c8` (code-bearing
 checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24). Its contest
 package now contains the complete current source under
 `submissions/Track2-Physics-First-AI-NuclidePath/source/`, the updated

@@ -137,11 +137,11 @@ function notes(slide,body){ slide.addNotes(body); }
  const s=pptx.addSlide(); bg(s);
  text(s,'WHY NUCLIDEPATH WINS',0.72,0.55,4.2,0.3,11,C.orange,{bold:true,charSpacing:1.8});
  text(s,'Private AI without\nscientific surrender.',0.72,1.20,6.15,1.52,36,C.text,{bold:true,valign:'top'});
- const claims=[['LOCAL','Qwen3.5-9B + RAG + memory on AMD'],['VERIFIABLE','231 AMD core tests + FP64 parity + SHA-256'],['USEFUL','One-click workflow from case to report'],['HONEST','PHREEQC bridge explicit; no unqualified science']];
+ const claims=[['LOCAL','Qwen3.5-9B + RAG + memory on AMD'],['VERIFIABLE','388 AMD post-merge tests + FP64 parity + SHA-256'],['USEFUL','One-click workflow from case to report'],['HONEST','PHREEQC bridge explicit; no unqualified science']];
  claims.forEach((c,i)=>{const y=3.25+i*0.72; text(s,c[0],0.82,y,1.4,0.34,12,[C.green,C.blue,C.orange,C.yellow][i],{fontFace:'Liberation Mono',bold:true}); text(s,c[1],2.30,y,4.6,0.34,16,C.text,{bold:true});});
  rect(s,7.55,0.72,5.08,5.98,C.layer,C.line);
  text(s,'The proof',7.95,1.10,2.0,0.36,20,C.text,{bold:true});
- stat(s,7.95,1.78,2.0,'5/5','Track 2 capabilities',C.green); stat(s,10.27,1.78,1.85,'231','AMD core tests',C.blue);
+ stat(s,7.95,1.78,2.0,'5/5','Track 2 capabilities',C.green); stat(s,10.27,1.78,1.85,'388','AMD tests (post-merge)',C.blue);
  stat(s,7.95,3.05,2.0,'137.09×','FP64 platform',C.orange); stat(s,10.27,3.05,1.85,'0','cloud calls',C.purple);
  text(s,'Track 2 · Physics-First AI · NuclidePath',7.95,4.58,4.0,0.35,15,C.text,{bold:true});
  text(s,'Official AMD Track 2 PR package',7.95,5.15,4.0,0.32,12,C.blue,{fontFace:'Liberation Mono'});
