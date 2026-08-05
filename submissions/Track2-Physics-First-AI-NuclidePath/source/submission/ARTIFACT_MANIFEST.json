@@ -6,7 +6,7 @@
     "amd_rocm": "231 passed",
     "amd_final_snapshot_sha256": "b2f20aadad8559deeba738ff2273fe10c3b48e945615f8105540fdd3b7a9ebe5",
     "amd_physics_benchmark_revision": "5edb8ce24b690810efad703f7550650192598118",
-    "amd_postmerge_rerun": "388 passed, 2 skipped (external-PHREEQC only); 5 Aug 2026, head b6d4c61e74"
+    "amd_postmerge_rerun": "388 passed, 2 skipped (external-PHREEQC only); 5 Aug 2026, head b6d4c61e74 (code unchanged by later documentation-only commits; current main d7664dc)"
   },
   "artifacts": [
     {

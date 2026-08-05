@@ -26,7 +26,7 @@
     "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
     "complete_source_copied": true,
     "source_copy_location": "submissions/Track2-Physics-First-AI-NuclidePath/source/",
-    "source_copy_release": "d7664dc (current main head; final submission review alignment)",
+    "source_copy_release": "49d3942 (current main head; final alignment)",
     "notes": "source copy excludes .git, .venv, node_modules, build, dist, results, private-deliverables"
   },
   "submission_state": {
