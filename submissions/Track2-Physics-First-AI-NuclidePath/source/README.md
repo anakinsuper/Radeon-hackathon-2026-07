@@ -245,7 +245,7 @@ A full run creates:
 | `memory.jsonl` | local redacted multi-turn session state |
 | `manifest.json` | SHA-256 checksum for every other artifact |
 
-A clean installed-wheel run includes every current bundled scientific dataset. The submission-level manifest at `submission/ARTIFACT_MANIFEST.json` verifies sixteen tracked core Track 2 editorial, visual and AMD evidence artifacts; it does not claim a trusted PHREEQC multicomponent run.
+A clean installed-wheel run includes every current bundled scientific dataset. The submission-level manifest at `submission/ARTIFACT_MANIFEST.json` verifies twenty-two tracked core Track 2 editorial, visual and AMD evidence artifacts; it does not claim a trusted PHREEQC multicomponent run.
 
 ### Versioned scenario library
 

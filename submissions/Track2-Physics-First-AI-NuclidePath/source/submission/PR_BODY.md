@@ -117,9 +117,9 @@ run on `refs/heads/main`.
 ### Submission artifacts
 
 - `README.md` — project narrative and reproduction;
-- `submission/NuclidePath_Track2_Deck.pptx` — nine-slide core Track 2 deck;
+- `submission/NuclidePath_Track2_Deck.pptx` — ten-slide core Track 2 deck;
 - `submission/NuclidePath_Project_Specification.pdf` — current specification;
-- `submission/ARTIFACT_MANIFEST.json` — sixteen tracked visual, editorial and AMD evidence hashes;
+- `submission/ARTIFACT_MANIFEST.json` — twenty-two tracked visual, editorial and AMD evidence hashes;
 - `docs/RELEASE_STATE.md` — source/evidence/submission boundary;
 - `docs/SCIENTIFIC_VALIDATION_GATE.md` — offline calibration/hold-out contract;
 - `docs/SUBMISSION_CHECKLIST.md` — release gates.
