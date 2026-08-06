@@ -106,7 +106,7 @@ All physical values are produced by a deterministic, versioned tool; the local L
 
 Before PR submission, confirm:
 
-- [x] contest fork branch exists and is synchronized to current `main` documentation head `c4d9cf7` (code-bearing checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c`); complete source copied under `submissions/Track2-Physics-First-AI-NuclidePath/source/` with contest-local manifest v2.0;
+- [x] contest fork branch exists and is synchronized to current `main` documentation head `3714bf8` (code-bearing checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c`); complete source copied under `submissions/Track2-Physics-First-AI-NuclidePath/source/` with contest-local manifest v2.0;
 - [ ] contest fork package synchronized with current `main`; complete source copied under the contest submission directory;
 - [ ] Luma registration approved;
 - [ ] AMD Developer Program membership active;
