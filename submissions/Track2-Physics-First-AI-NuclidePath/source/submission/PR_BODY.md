@@ -1,12 +1,7 @@
-# Pull request package
+# NuclidePath — Track 2 submission
 
-## Exact title
-
-```text
-Track 2, Physics-First AI, NuclidePath
-```
-
-## Body
+**Track:** AMD AI DevMaster Hackathon 2026, Track 2 (Development & Local Deployment of Private AI Agents)
+**Team / Author:** Physics-First AI — Stefano Rigante (nuclear engineer, contaminant transport)
 
 ### Project
 
@@ -67,20 +62,12 @@ the FP64 platform benchmark reproducing 1.82 ms median / 132.8× speedup /
 `artifacts/amd-2026-08-05/post-merge/` with SHA-256 digests.
 All 13 PyTorch/ROCm tests skipped in the dependency-light CI pass on the AMD GPU.
 
-The preceding merged-bridge integration checkpoint is PR #15 CI run
-[30928408962](https://github.com/anakinsuper/NuclidePath/actions/runs/30928408962):
-Python 3.11.15, 364 passed, 15 skipped, workflow policy/wheel/whitespace PASS.
-The latest code-bearing registry checkpoint is PR #24 CI run
-[30993946602](https://github.com/anakinsuper/NuclidePath/actions/runs/30993946602):
-373 passed, 15 skipped, with workflow policy/wheel/whitespace PASS. Two later
-review-hardening commits `3714bf8` and `1605cc6` brought the current `main` head
-`df8f028` to run `31111109865`: 377 passed, 15 skipped, with the same gates PASS.
-The preceding
-calibration-gate checkpoint is PR #22 CI run
-[30936374478](https://github.com/anakinsuper/NuclidePath/actions/runs/30936374478):
-370 passed, 15 skipped. These are
-GitHub-hosted integration checkpoints, not a fresh post-merge AMD rerun or a
-trusted self-hosted PHREEQC run.
+The GitHub-hosted CI gate for the current source passes **377 tests, 15 skipped**
+(review hardening: atomic session-memory rewrite, free-text secret redaction,
+tightened calibration promotion gate), with workflow policy, Python
+compilation, wheel, editorial-toolchain and whitespace checks all PASS. These
+are GitHub-hosted integration checkpoints, not a fresh post-merge AMD rerun or
+a trusted self-hosted PHREEQC run.
 
 ### Demo video
 
@@ -92,7 +79,11 @@ agent/transport workflow; it does not show the later PHREEQC bridge. The
 public judge-accessible copy is hosted on Google Drive (SHA-256
 `47dc62f419c778d19af5724314a5d3bf3e04c3ee2175349897393162977c0d80`).
 
-The contest branch now stores the editorial package and a complete copied source tree under `submissions/Track2-Physics-First-AI-NuclidePath/source/`, synchronized from private `main` (verified byte-identical to head `df8f028` on 6 August 2026, excluding the internal `.hermes/` planning directory). The contest-local manifest is `nuclidepath-contest-manifest-2.0` and the complete current source is judge-accessible inside the submission.
+The contest branch stores the editorial package and a complete copied source
+tree under `submissions/Track2-Physics-First-AI-NuclidePath/source/`, synchronized
+from private `main` (excluding the internal `.hermes/` planning directory).
+The contest-local manifest is `nuclidepath-contest-manifest-2.0` and the complete
+current source is judge-accessible inside the submission.
 
 ### Reproduce locally
 
@@ -126,13 +117,3 @@ run on `refs/heads/main`.
 - `docs/RELEASE_STATE.md` — source/evidence/submission boundary;
 - `docs/SCIENTIFIC_VALIDATION_GATE.md` — offline calibration/hold-out contract;
 - `docs/SUBMISSION_CHECKLIST.md` — release gates.
-
-### Pre-open gates
-
-- [x] Public judge-accessible video URL inserted and verified (Google Drive,
-      SHA-256 `47dc62f419c778d19af5724314a5d3bf3e04c3ee2175349897393162977c0d80`).
-- [ ] Confirm Luma registration and AMD Developer Program eligibility.
-- [x] Complete current source copied into the contest submission.
-- [x] Contest package regenerated/synchronized from the selected current
-      source snapshot.
-- [x] Official PR opened after participant authorized publication (6 Aug 2026).

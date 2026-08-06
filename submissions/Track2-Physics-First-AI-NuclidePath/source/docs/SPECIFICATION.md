@@ -234,11 +234,11 @@ Measured AMD `transport-prototype-0.2` runtime checkpoint:
 - full 128-sample LLM-planned pipeline: `1.007 s`;
 - LLM and offline physical `runs`: identical.
 
-The preceding integration gate for the merged multicomponent bridge passed `364` tests, `15` skipped, with workflow policy, wheel and whitespace checks PASS. The current `main` head `df8f028` passed `377` tests, `15` skipped (run `31111109865`), after the review-hardening commits `3714bf8`/`1605cc6`; the preceding registry gate passed `373`, and the calibration-gate integration before it passed `370` tests, `15` skipped, with the same technical checks. The AMD ROCm evidence includes the dated 28 July core-platform snapshot at 231 passed with exact FP64 primary-GCS/platform parity, plus a **5 August post-merge rerun of `main` at head `b6d4c61e74`: 388 passed, 2 skipped** (only external-PHREEQC) under `artifacts/amd-2026-08-05/post-merge/`.
+The preceding integration gate for the merged multicomponent bridge passed `364` tests, `15` skipped, with workflow policy, wheel and whitespace checks PASS. The current `main` head passed `377` tests, `15` skipped, after the review-hardening commits (atomic memory rewrite, free-text secret redaction, tightened calibration promotion gate); the preceding registry gate passed `373`, and the calibration-gate integration before it passed `370` tests, `15` skipped, with the same technical checks. The AMD ROCm evidence includes the dated 28 July core-platform snapshot at 231 passed with exact FP64 primary-GCS/platform parity, plus a **5 August post-merge rerun of `main` at head `b6d4c61e74`: 388 passed, 2 skipped** (only external-PHREEQC) under `artifacts/amd-2026-08-05/post-merge/`.
 
 ## 11. Verification
 
-The dependency-light controller evidence contains 216 passing tests plus 13 optional-PyTorch skips; the PyTorch controller checkpoint passes 231 tests, and the retained AMD ROCm core-platform snapshot passes 231. The preceding bridge gate adds the PHREEQC multicomponent contracts and independent arithmetic oracle and reports 364 passed/15 skipped; the calibration gate after it reports 370 passed/15 skipped, the registry gate 373 passed/15 skipped, and the current `main` head 377 passed/15 skipped (run `31111109865`). Together these checkpoints cover:
+The dependency-light controller evidence contains 216 passing tests plus 13 optional-PyTorch skips; the PyTorch controller checkpoint passes 231 tests, and the retained AMD ROCm core-platform snapshot passes 231. The preceding bridge gate adds the PHREEQC multicomponent contracts and independent arithmetic oracle and reports 364 passed/15 skipped; the calibration gate after it reports 370 passed/15 skipped, the registry gate 373 passed/15 skipped, and the current `main` head 377 passed/15 skipped. Together these checkpoints cover:
 
 - physical formulas and analytical cases;
 - K+ monotonicity and radioactive decay;
@@ -291,6 +291,6 @@ registry with source digests, CSV integrity checks and
 `calibration_eligible: false`. Its GitHub-hosted CI gate passed with
 `373 passed, 15 skipped`, including workflow policy, compilation, wheel and
 whitespace checks. Two later review-hardening commits brought the current `main`
-head to `377 passed, 15 skipped` (run `31111109865`) with the same gates PASS.
+head to `377 passed, 15 skipped` with the same gates PASS.
 This is not a trusted self-hosted PHREEQC run, an AMD post-merge rerun, or
 scientific calibration evidence.

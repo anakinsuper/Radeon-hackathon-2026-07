@@ -17,8 +17,8 @@
     },
     {
       "path": "submission/NuclidePath_Project_Specification.pdf",
-      "bytes": 291591,
-      "sha256": "968a6c7e0c28bbd095fa0814e43bbf6d90cf8ed0e6b342aaf0cb16bc47952f7c"
+      "bytes": 243135,
+      "sha256": "d694c26575881501e3460e7367cfd01b0af93a181494dcb679c6e388fae73c27"
     },
     {
       "path": "docs/assets/architecture.svg",
@@ -127,8 +127,8 @@
     "default_branch": "main",
     "current_feature_state": "PHREEQC schema 2 multicomponent bridge with independent arithmetic oracle, K-free Na-Ca-Mg fixtures and dependency-free traceable Cs calibration/hold-out gate; canonical transport unchanged; separate EPA/Fuller/Dubus external Cs benchmark registry with calibration_eligible=false",
     "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
-    "public_contest_branch_source_release": "df8f028 (current main head: docs-align commit completing the 377/15 review-hardening release; includes deck multicomponent-bridge card, spec cover multicomponent note, 132.8x post-merge AMD figure, regenerated PDF/deck/contact sheets; code-bearing checkpoint 2b256e322eaa8ca45a5b939fdecad09d66019b0c)",
-    "public_contest_branch_status": "synchronized to current main source release; complete source copied into contest package under submissions/Track2-Physics-First-AI-NuclidePath/source/; contest-local manifest v2.0; public video URL pending; source copy at df8f028",
+    "public_contest_branch_source_release": "00d8619f49fe602f3d2daddd1d9c8bba72807271 (content head: judge-facing surfaces cleaned of internal CI/PR references; spec PDF regenerated; 377/15 gate)",
+    "public_contest_branch_status": "synchronized to current main source release; complete source copied into contest package under submissions/Track2-Physics-First-AI-NuclidePath/source/; contest-local manifest v2.0; public video URL inserted and verified; source copy at 00d8619",
     "artifact_generation_base": "a94c76ee078a7bd24feb98965a6682a274781deb",
     "current_main_head_policy": "fetch refs/heads/main directly; documentation-only merges may advance the branch",
     "last_code_bearing_main_checkpoint": "2b256e322eaa8ca45a5b939fdecad09d66019b0c (PR #24 merge; PR head 58656141db4a3a17d49a7e0a2f9ffda20f434130; fetch refs/heads/main directly for current documentation HEAD)",
@@ -167,7 +167,7 @@
     },
     "visual_artifacts": {
       "deck_sha256": "a5c80475da745a6f9785488e4a78a8e971a0d78ead444eb0acc0a6c0ab07fd32",
-      "specification_pdf_sha256": "16f61e19500e80f091f38eb359ca7884891fc4b73d1a673a88320753c3f2d605",
+      "specification_pdf_sha256": "d694c26575881501e3460e7367cfd01b0af93a181494dcb679c6e388fae73c27",
       "scope": "current source documentation and core Track 2 visual package; PHREEQC bridge explicitly labelled but not shown in the video; deck slide 5 carries the multicomponent bridge card and the spec cover carries the multicomponent note"
     },
     "historical_documentation_ci": {

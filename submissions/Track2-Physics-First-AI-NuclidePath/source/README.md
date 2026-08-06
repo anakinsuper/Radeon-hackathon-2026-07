@@ -12,8 +12,7 @@ Team: **Physics-First AI** · Application: **NuclidePath**
 > the separate EPA/Fuller/Dubus external Cs benchmark registry, and the
 > review-hardening commits `3714bf8`/`1605cc6` (atomic session-memory rewrite,
 > free-text secret redaction, tightened calibration promotion gate).
-> The latest GitHub-hosted CI gate (run `31111109865`, head `df8f028`) passed
-> with `377 passed, 15 skipped`.
+> The latest GitHub-hosted CI gate passed with `377 passed, 15 skipped`.
 > This is GitHub-hosted CI evidence. A **post-merge AMD/ROCm rerun of the `main`
 > tree at head `b6d4c61e74`** (5 August 2026) passed **388 tests,
 > 2 skipped** (external-PHREEQC only) under `artifacts/amd-2026-08-05/post-merge/`;
@@ -112,21 +111,15 @@ nuclear-emergency-demo \
   --session-id offline-demo
 ```
 
-Latest code-bearing check (GitHub-hosted CI run
-[31111109865](https://github.com/anakinsuper/NuclidePath/actions/runs/31111109865),
-head `df8f028`):
+Latest code-bearing check (GitHub-hosted CI):
 
 ```text
 377 passed, 15 skipped (review hardening: atomic memory rewrite, free-text secret redaction)
 ```
 
-The preceding review-hardening checkpoint `3714bf8` passed 376 tests, 15 skipped.
-
-The preceding external Cs registry checkpoint (PR #24, run `30993946602`):
-373 passed, 15 skipped.
-
-The preceding calibration/hold-out gate:
-370 passed, 15 skipped.
+The preceding review-hardening checkpoint passed 376 tests, 15 skipped.
+The preceding external Cs registry checkpoint passed 373 tests, 15 skipped.
+The preceding calibration/hold-out gate passed 370 tests, 15 skipped.
 
 Preceding merged-bridge integration checkpoint:
 
