@@ -15,7 +15,7 @@ from yaml.tokens import AliasToken, AnchorToken, TagToken
 ROOT = Path(__file__).resolve().parents[1]
 ALLOWED = {"ci.yml", "phreeqc-qualification.yml"}
 EXPECTED_WORKFLOW_SHA256 = {
-    "ci.yml": "71c47a4d91658e01c6b12510af8a0a3ab7f8a8292829327393478e5c91b94a3f",
+    "ci.yml": "ce2b07e84a0f95cab186bcbdd62609e5046b43687c6a901d7856f5c0c00ee900",
     "phreeqc-qualification.yml": "b9faf81b4b3c8ae1faa54bbea729206f8508af8d1acb46349d168119941c2f1a",
 }
 SHA_ACTION = re.compile(r"^actions/(?:checkout|setup-python)@[0-9a-f]{40}$")
@@ -123,7 +123,8 @@ def validate(root: Path = ROOT) -> None:
     if set(ci.get("on", {})) != {"push", "pull_request", "workflow_dispatch"}:
         raise PolicyError("ci.yml: trigger policy mismatch")
     for required in ("python scripts/check_workflow_security.py", "python -m compileall -q src tests",
-                     "python -m pytest -q", "python -m build --wheel --no-isolation", "git diff --check"):
+                     "python -m pytest -q", "python -m build --wheel --no-isolation", "git diff --check",
+                     "node --check scripts/generate_deck.js", "npm ci --no-audit --no-fund"):
         if required not in ci_commands:
             raise PolicyError(f"ci.yml: missing command {required}")
     manual = workflows["phreeqc-qualification.yml"]

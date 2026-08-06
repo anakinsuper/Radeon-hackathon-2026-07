@@ -72,7 +72,12 @@ class LocalMemoryStore:
         return records[-limit:]
 
     def clear_session(self, session_id: str) -> int:
-        """Delete one local session and return the number of removed turns."""
+        """Delete one local session and return the number of removed turns.
+
+        The rewrite is atomic: records are written to a temporary sibling file
+        which is then renamed over the original, so a crash mid-write cannot
+        corrupt the session store.
+        """
         self.policy.require("write_memory")
         all_records: list[dict[str, Any]] = []
         removed = 0
@@ -86,8 +91,13 @@ class LocalMemoryStore:
                     removed += 1
                 else:
                     all_records.append(record)
-        with self.path.open("w", encoding="utf-8") as handle:
+        if removed == 0:
+            return 0
+        temporary = self.path.with_suffix(self.path.suffix + ".tmp")
+        with temporary.open("w", encoding="utf-8") as handle:
             for record in all_records:
                 handle.write(json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n")
+        os.chmod(temporary, 0o600)
+        os.replace(temporary, self.path)
         os.chmod(self.path, 0o600)
         return removed

@@ -49,5 +49,11 @@ jobs:
         run: python -m pytest -q
       - name: Build wheel without dependency resolution
         run: python -m build --wheel --no-isolation
+      - name: Check editorial toolchain (deck generator syntax + pptxgenjs resolution)
+        run: |
+          node --check scripts/generate_deck.js
+          node --check scripts/generate_spec_pdf.js
+          npm ci --no-audit --no-fund
+          node -e "require('pptxgenjs'); console.log('pptxgenjs resolvable')"
       - name: Check patch whitespace
         run: git diff --check

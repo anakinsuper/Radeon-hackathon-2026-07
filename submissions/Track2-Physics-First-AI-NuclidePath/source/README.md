@@ -10,7 +10,7 @@ Team: **Physics-First AI** · Application: **NuclidePath**
 > K-free Central Oklahoma fixtures, dynamic per-ion diagnostics and report
 > integration, the dependency-free traceable Cs calibration/hold-out gate, and
 > the separate EPA/Fuller/Dubus external Cs benchmark registry.
-> The latest GitHub-hosted CI gate passed with `376 passed, 15 skipped`.
+> The latest GitHub-hosted CI gate passed with `377 passed, 15 skipped`.
 > This is GitHub-hosted CI evidence. A **post-merge AMD/ROCm rerun of the full
 > current `main` tree** (5 August 2026) passed **388 tests,
 > 2 skipped** (external-PHREEQC only) under `artifacts/amd-2026-08-05/post-merge/`.

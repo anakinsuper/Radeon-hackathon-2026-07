@@ -1,21 +1,21 @@
 {
   "schema_version": "nuclidepath-contest-manifest-2.0",
-  "source_release": "3714bf8",
+  "source_release": "1605cc6",
   "contest_artifacts": [
     {
       "path": "NuclidePath_Project_Specification.pdf",
-      "bytes": 241846,
-      "sha256": "c9aa0e4c8ec5056c3d4711bcfeadb32a67dc05d8f69844893169bde9ce2a9d45"
+      "bytes": 241714,
+      "sha256": "16f61e19500e80f091f38eb359ca7884891fc4b73d1a673a88320753c3f2d605"
     },
     {
       "path": "NuclidePath_Track2_Deck.pptx",
       "bytes": 757323,
-      "sha256": "77783c495775206ecc64439169a637d658084f73849247618978334a2832c70a"
+      "sha256": "a5c80475da745a6f9785488e4a78a8e971a0d78ead444eb0acc0a6c0ab07fd32"
     },
     {
       "path": "NuclidePath_Track2_Deck.pdf",
       "bytes": 481532,
-      "sha256": "d27f45063bbb57808e91b72fc2703639241b1e3c7ffc844ba1310eda937246b5"
+      "sha256": "5acea74e7a1f5e87a2f2aa415959fedd0cebd74b6b56e1be36069b90d6940ae8"
     }
   ],
   "source_context": {
@@ -26,7 +26,7 @@
     "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
     "complete_source_copied": true,
     "source_copy_location": "submissions/Track2-Physics-First-AI-NuclidePath/source/",
-    "source_copy_release": "3714bf8 (current main head; review-hardening fixes, 376/15 gate)",
+    "source_copy_release": "1605cc6 (current main head; atomic memory, secret redaction, editorial CI, 377/15 gate)",
     "notes": "source copy excludes .git, .venv, node_modules, build, dist, results, private-deliverables"
   },
   "submission_state": {

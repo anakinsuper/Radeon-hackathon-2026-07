@@ -2,12 +2,30 @@
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from typing import Any, Mapping
 
 
 class PermissionDenied(RuntimeError):
     """Raised when a role requests an action outside the local allowlist."""
+
+
+# Secret-shaped patterns scanned in free text (review finding: key-based
+# redaction alone misses tokens embedded in prose).
+_SECRET_PATTERNS = (
+    re.compile(r"\b(?:api[_-]?key|apikey|secret|token|password|passwd|pwd)\b\s*[=:]\s*\S+", re.I),
+    re.compile(r"\bBearer\s+[A-Za-z0-9._~+/=-]{16,}", re.I),
+    re.compile(r"\bghp_[A-Za-z0-9]{36,}\b"),
+    re.compile(r"\b(?:sk|pk|ak)[-_][A-Za-z0-9]{16,}\b"),
+)
+
+
+def _redact_secrets(text: str) -> str:
+    """Replace secret-shaped substrings in free text with [REDACTED]."""
+    for pattern in _SECRET_PATTERNS:
+        text = pattern.sub("[REDACTED]", text)
+    return text
 
 
 @dataclass(frozen=True)
@@ -82,4 +100,6 @@ class PermissionPolicy:
             return [self.redact_payload(value) for value in payload]
         if isinstance(payload, tuple):
             return tuple(self.redact_payload(value) for value in payload)
+        if isinstance(payload, str):
+            return _redact_secrets(payload)
         return payload

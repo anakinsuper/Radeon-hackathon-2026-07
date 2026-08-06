@@ -3,7 +3,7 @@
   "release_evidence": {
     "controller_dependency_light": "216 passed, 13 skipped",
     "controller_pytorch": "231 passed",
-    "controller_current": "376 passed, 15 skipped (post-review hardening, 6 Aug 2026)",
+    "controller_current": "377 passed, 15 skipped (post-review hardening, 6 Aug 2026)",
     "amd_rocm": "231 passed",
     "amd_final_snapshot_sha256": "b2f20aadad8559deeba738ff2273fe10c3b48e945615f8105540fdd3b7a9ebe5",
     "amd_physics_benchmark_revision": "5edb8ce24b690810efad703f7550650192598118",
@@ -13,12 +13,12 @@
     {
       "path": "submission/NuclidePath_Track2_Deck.pptx",
       "bytes": 757323,
-      "sha256": "77783c495775206ecc64439169a637d658084f73849247618978334a2832c70a"
+      "sha256": "a5c80475da745a6f9785488e4a78a8e971a0d78ead444eb0acc0a6c0ab07fd32"
     },
     {
       "path": "submission/NuclidePath_Project_Specification.pdf",
-      "bytes": 241846,
-      "sha256": "c9aa0e4c8ec5056c3d4711bcfeadb32a67dc05d8f69844893169bde9ce2a9d45"
+      "bytes": 241714,
+      "sha256": "16f61e19500e80f091f38eb359ca7884891fc4b73d1a673a88320753c3f2d605"
     },
     {
       "path": "docs/assets/architecture.svg",
@@ -37,8 +37,8 @@
     },
     {
       "path": "docs/assets/deck-contact.png",
-      "bytes": 210723,
-      "sha256": "c4a09dcba235d9401a38b398d3bb17090eb83a462fb24275514bb2a40d2fff1e"
+      "bytes": 210706,
+      "sha256": "c1b301c7a2a717688cb69708921ca633dccf0462496be938b06675a00af6d4ea"
     },
     {
       "path": "docs/assets/spec-contact.png",
@@ -62,8 +62,8 @@
     },
     {
       "path": "private-deliverables/current-video-assets/slide-01.png",
-      "bytes": 55615,
-      "sha256": "6078165a8212be0c900d2541665067364f970da4dada1170873849eb015c06d8"
+      "bytes": 54580,
+      "sha256": "f991cbdab2d9b2e44ef262381d94f01a77c4a5f4ff8233f40849b74d58012f2f"
     },
     {
       "path": "private-deliverables/current-video-assets/slide-03.png",
@@ -82,8 +82,8 @@
     },
     {
       "path": "private-deliverables/current-video-assets/slide-08.png",
-      "bytes": 82584,
-      "sha256": "bbfcc1a793401fcea708460fa701b6eac0bb64debbfa1472aa78a3c7393e6b78"
+      "bytes": 81694,
+      "sha256": "263aaa03a6b3aeacb03ac0a2e99544506f5a09d68fec4a0b2b6498b895b45e1d"
     },
     {
       "path": "private-deliverables/current-video-assets/slide-09.png",
@@ -118,7 +118,7 @@
     {
       "path": "submission/NuclidePath_Track2_Deck.pdf",
       "bytes": 481532,
-      "sha256": "d27f45063bbb57808e91b72fc2703639241b1e3c7ffc844ba1310eda937246b5"
+      "sha256": "5acea74e7a1f5e87a2f2aa415959fedd0cebd74b6b56e1be36069b90d6940ae8"
     }
   ],
   "source_context": {
@@ -166,8 +166,8 @@
       "central_oklahoma_multicomponent": "trusted real run pending"
     },
     "visual_artifacts": {
-      "deck_sha256": "77783c495775206ecc64439169a637d658084f73849247618978334a2832c70a",
-      "specification_pdf_sha256": "c9aa0e4c8ec5056c3d4711bcfeadb32a67dc05d8f69844893169bde9ce2a9d45",
+      "deck_sha256": "a5c80475da745a6f9785488e4a78a8e971a0d78ead444eb0acc0a6c0ab07fd32",
+      "specification_pdf_sha256": "16f61e19500e80f091f38eb359ca7884891fc4b73d1a673a88320753c3f2d605",
       "scope": "current source documentation and core Track 2 visual package; PHREEQC bridge explicitly labelled but not shown in the video; deck slide 5 carries the multicomponent bridge card and the spec cover carries the multicomponent note"
     },
     "historical_documentation_ci": {
