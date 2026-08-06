@@ -225,7 +225,7 @@ The private documentation, submission package and non-runner PHREEQC remediation
 A **post-merge AMD/ROCm rerun of the full current `main` tree** was executed on 2026-08-05 on the AMD workspace (gfx1100, ROCm 7.2.1, torch `2.9.1+gitff65f5b`, head `b6d4c61e74`): **388 passed, 2 skipped** (only the external-PHREEQC solver tests), with the FP64 platform benchmark reproducing 1.82 ms median / 132.8× / 7.94e-14 max error. Evidence under `artifacts/amd-2026-08-05/post-merge/` with SHA256SUMS.
 The public contest-fork branch
 `submission/track2-physics-first-ai-nuclidepath` was synchronized on 2026-08-05
-to the current `main` documentation head `c4d9cf7` (latest documentation head
+to the current `main` documentation head `da84ab3` (latest documentation head
 including the deck multicomponent bridge card and the spec cover multicomponent
 note; code-bearing checkpoint
 `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24): the complete current
