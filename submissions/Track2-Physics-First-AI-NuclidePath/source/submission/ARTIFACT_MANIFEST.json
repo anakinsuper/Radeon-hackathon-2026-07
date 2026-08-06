@@ -12,12 +12,12 @@
     {
       "path": "submission/NuclidePath_Track2_Deck.pptx",
       "bytes": 757323,
-      "sha256": "579d6fea7d9389efb54863ac3c26e1fc491878ada14701d08fa0802fd7aa38ee"
+      "sha256": "5784f6bfcb84c13fa39f9e74450ed3b770318e5552c072ea646961c24c4c490a"
     },
     {
       "path": "submission/NuclidePath_Project_Specification.pdf",
       "bytes": 241714,
-      "sha256": "6cd434f5f272c3bf7443fc128000b89ea03cb5278e57df8195e8809c27bd6642"
+      "sha256": "c902ed79a8edd10cd0b6586553cfa57073c3ab4476f87239566c9027a60d515f"
     },
     {
       "path": "docs/assets/architecture.svg",
@@ -36,13 +36,13 @@
     },
     {
       "path": "docs/assets/deck-contact.png",
-      "bytes": 578038,
-      "sha256": "2438913f820f08ea2301958876bf1999c83661399cb580c345a46ed0b28ec5ad"
+      "bytes": 210729,
+      "sha256": "166a425e9ca47dd4ac31f3d23e6f47d9c3f94dc8acf398675ff4a91fcad3f269"
     },
     {
       "path": "docs/assets/spec-contact.png",
-      "bytes": 988490,
-      "sha256": "6c8d796e647b731425c3347ec5d458d2d1b3fdb81adb294da52e00fa8a8b048e"
+      "bytes": 626858,
+      "sha256": "c6a8df40012cae77bf99e3becc0127dfa896c458fb4b5e24738659fb022cca48"
     },
     {
       "path": "docs/assets/video-contact.png",
@@ -117,7 +117,7 @@
     {
       "path": "submission/NuclidePath_Track2_Deck.pdf",
       "bytes": 481533,
-      "sha256": "1aa0a4254a9e9fd5ba28886316712f59a71ea4ba410b43167c452e5a3a9ddc71"
+      "sha256": "9a03be6b187701646b2058ec8270dfcf7764631ba3b731cd5cf489b3de827598"
     }
   ],
   "source_context": {
@@ -126,8 +126,8 @@
     "default_branch": "main",
     "current_feature_state": "PHREEQC schema 2 multicomponent bridge with independent arithmetic oracle, K-free Na-Ca-Mg fixtures and dependency-free traceable Cs calibration/hold-out gate; canonical transport unchanged; separate EPA/Fuller/Dubus external Cs benchmark registry with calibration_eligible=false",
     "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
-    "public_contest_branch_source_release": "a9b65b5 (current main documentation head, includes deck multicomponent-bridge card and spec cover multicomponent note; code-bearing checkpoint 2b256e322eaa8ca45a5b939fdecad09d66019b0c)",
-    "public_contest_branch_status": "synchronized to current main source release; complete source copied into contest package under submissions/Track2-Physics-First-AI-NuclidePath/source/; contest-local manifest v2.0; public video URL pending; source copy at a9b65b5",
+    "public_contest_branch_source_release": "c4d9cf7 (current main documentation head, includes deck multicomponent-bridge card and spec cover multicomponent note; code-bearing checkpoint 2b256e322eaa8ca45a5b939fdecad09d66019b0c)",
+    "public_contest_branch_status": "synchronized to current main source release; complete source copied into contest package under submissions/Track2-Physics-First-AI-NuclidePath/source/; contest-local manifest v2.0; public video URL pending; source copy at c4d9cf7",
     "artifact_generation_base": "a94c76ee078a7bd24feb98965a6682a274781deb",
     "current_main_head_policy": "fetch refs/heads/main directly; documentation-only merges may advance the branch",
     "last_code_bearing_main_checkpoint": "2b256e322eaa8ca45a5b939fdecad09d66019b0c (PR #24 merge; PR head 58656141db4a3a17d49a7e0a2f9ffda20f434130; fetch refs/heads/main directly for current documentation HEAD)",
@@ -165,9 +165,9 @@
       "central_oklahoma_multicomponent": "trusted real run pending"
     },
     "visual_artifacts": {
-      "deck_sha256": "a2074cdecbe7e88f95210611246913cbe0a41a3e6f2c95270b0ecbee8343b1ff",
-      "specification_pdf_sha256": "751de4ace49f080aa9b45aa73d45f10c4fe1dfb367437bcd56b4771b507e685c",
-      "scope": "current source documentation and core Track 2 visual package; PHREEQC bridge explicitly labelled but not shown in the video"
+      "deck_sha256": "5784f6bfcb84c13fa39f9e74450ed3b770318e5552c072ea646961c24c4c490a",
+      "specification_pdf_sha256": "c902ed79a8edd10cd0b6586553cfa57073c3ab4476f87239566c9027a60d515f",
+      "scope": "current source documentation and core Track 2 visual package; PHREEQC bridge explicitly labelled but not shown in the video; deck slide 5 carries the multicomponent bridge card and the spec cover carries the multicomponent note"
     },
     "historical_documentation_ci": {
       "scope": "Historical checkpoint; documentation-only merges may advance main. Fetch main and Actions for current state.",
@@ -200,7 +200,7 @@
   },
   "artifact_generation": {
     "deck": "npm run deck",
-    "specification_pdf": "scripts/generate_spec_pdf_fallback.py; Playwright browser unavailable in this container",
+    "specification_pdf": "scripts/generate_spec_pdf.js (Playwright renderer; fallback scripts/generate_spec_pdf_fallback.py)",
     "current_video_assets": "python3 scripts/generate_current_video_assets.py",
     "contact_sheets": "soffice conversion + Poppler rendering + ImageMagick montage",
     "visual_qa": "PDF rendered with Poppler and inspected on all 8 pages; deck/spec/video contact sheets inspected"
