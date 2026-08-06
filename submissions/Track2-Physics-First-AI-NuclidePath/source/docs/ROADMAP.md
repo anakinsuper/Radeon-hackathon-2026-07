@@ -21,7 +21,7 @@ NuclidePath is expanded by making evidence, deterministic physics, and reproduci
 - [x] Offline Cs exchange calibration gate: traceable dataset schema, group-disjoint calibration/hold-out split, transparent apparent-Kd fit, acceptance metrics and fail-closed promotion; no experimental dataset is bundled.
 - [x] Historical AMD `0.2` checkpoint: Qwen3.5-9B Q8 with llama.cpp/HIP on `gfx1100`, all layers offloaded; retained as explicitly historical evidence.
 - [x] AMD/ROCm evidence: historical 152-test/LLM/surrogate artifacts retained separately; the dated 28 July core-platform snapshot passes 231 tests and records exact FP64 primary-GCS → receptor parity and throughput under `artifacts/amd-2026-07-28/platform-current/`; the **post-merge full-current-`main` rerun (5 Aug) passes 388 tests, 2 skipped** under `artifacts/amd-2026-08-05/post-merge/`.
-- [x] Prepared contest fork branch is synchronized to current `main` documentation head `f18536a` (code-bearing checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24); complete source is copied into the contest package under `submissions/Track2-Physics-First-AI-NuclidePath/source/` with contest-local manifest `nuclidepath-contest-manifest-2.0`.
+- [x] Prepared contest fork branch is synchronized to current `main` documentation head `a9b65b5` (code-bearing checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24); complete source is copied into the contest package under `submissions/Track2-Physics-First-AI-NuclidePath/source/` with contest-local manifest `nuclidepath-contest-manifest-2.0`.
 - [ ] Hosted judge-accessible video link, complete-source accessibility and official submission PR.
 
 ## Part I — Submission critical path
