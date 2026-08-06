@@ -97,6 +97,26 @@ function notes(slide,body){ slide.addNotes(body); }
  footer(s,5); notes(s,'Describe the formulas and say validation means software/formula verification, not regulatory validation.');
 }
 
+// 5.5 — Recent extensions (post-merge work)
+{
+ const s=pptx.addSlide(); bg(s); title(s,'Recent extensions','Traceable post-merge science','The latest work adds deterministic, auditable layers around the canonical screening path.');
+ stat(s,0.72,1.82,3.0,'388/2','AMD post-merge tests',C.green);
+ stat(s,4.02,1.82,3.0,'4','ions · K/Na/Ca/Mg',C.blue);
+ stat(s,7.32,1.82,2.7,'2×','fixtures · brine/recharge',C.orange);
+ stat(s,10.42,1.82,2.1,'0','unqualified claims',C.purple);
+ const rows=[
+  ['PHREEQC bridge','Opt-in scenario compiler: declared water chemistry, CEC and Cs + K/Na/Ca/Mg into SOLUTION/EXCHANGE/TRANSPORT input'],
+  ['Arithmetic oracle','Independent machine-readable checks for units, grid mapping, non-negativity and exchange-site occupancy'],
+  ['Calibration gate','Dependency-free traceable Cs calibration/hold-out contract with fail-closed promotion; no data bundled'],
+  ['Benchmark registry','Separate EPA/Fuller/Dubus external Cs registry with source digests and calibration_eligible: false']
+ ];
+ rect(s,0.72,3.30,12.0,2.85,C.layer,C.line);
+ rows.forEach((r,i)=>{const y=3.55+i*0.62; text(s,r[0],1.00,y,2.6,0.30,12,C.orange,{bold:true}); text(s,r[1],3.75,y,8.6,0.55,11.5,C.text,{valign:'top',breakLine:true});});
+ pill(s,0.72,6.45,3.6,'PROCESS-QUALIFIED ONLY',C.yellow);
+ text(s,'Canonical transport-prototype-0.3 remains authoritative; the bridge is opt-in and does not replace it.',0.72,6.85,11.0,0.30,10.5,C.muted);
+ footer(s,6); notes(s,'Present the recent work as deterministic, tested and honestly scoped: the PHREEQC bridge is process-qualified, not calibrated chemistry. The canonical screening path is unchanged and authoritative.');
+}
+
 // 6 — AMD
 {
  const s=pptx.addSlide(); bg(s); title(s,'AMD deployment','Qwen3.5-9B Q8 runs locally on Radeon + ROCm','The measured local model fits in VRAM and produced the verified allow-listed plan.');
@@ -109,7 +129,7 @@ function notes(slide,body){ slide.addNotes(body); }
  ];
  rows.forEach((r,i)=>{const y=3.42+i*0.48; text(s,r[0],0.85,y,1.35,0.32,11,C.muted,{fontFace:'Liberation Mono'}); text(s,r[1],2.25,y,4.65,0.32,12,C.text,{bold:true});});
  rect(s,7.35,3.35,5.2,2.78,C.layer,C.line); text(s,'OFFLINE  ≡  LLM-PLANNED',7.72,3.80,4.45,0.54,24,C.green,{fontFace:'Liberation Mono',bold:true,align:'center'}); text(s,'Identical physical runs\nfor the same scenario',8.02,4.62,3.85,0.82,17,C.text,{align:'center',valign:'top'}); pill(s,9.12,5.50,1.67,'PHYSICS IDENTICAL',C.green);
- footer(s,6); notes(s,'Quote measured numbers only. The dated AMD v0.3 core-platform snapshot is verified; the equality check compares physical runs, not timestamped memory files.');
+ footer(s,7); notes(s,'Quote measured numbers only. The dated AMD v0.3 core-platform snapshot is verified; the equality check compares physical runs, not timestamped memory files.');
 }
 
 // 7 — Product
@@ -119,7 +139,7 @@ function notes(slide,body){ slide.addNotes(body); }
  card(s,9.42,1.72,3.22,1.35,'Editable physics','Kd, K+, velocity, porosity, distance and C₀.',C.orange);
  card(s,9.42,3.28,3.22,1.35,'Visible agency','Six completed steps and 5/5 capability badges.',C.green);
  card(s,9.42,4.84,3.22,1.35,'Auditable output','Ten downloadable artifacts plus a checksum manifest.',C.blue);
- footer(s,7); notes(s,'Run the live UI in the video. This slide is a fallback visual and repository preview.');
+ footer(s,8); notes(s,'Run the live UI in the video. This slide is a fallback visual and repository preview.');
 }
 
 // 8 — Uncertainty & provenance
@@ -129,7 +149,7 @@ function notes(slide,body){ slide.addNotes(body); }
  card(s,8.70,1.72,3.95,1.35,'Literature-informed range','Cs Kd: 0.05–5.0 m³/kg · IAEA TECDOC-2095',C.purple);
  card(s,8.70,3.28,3.95,1.35,'Demonstration ranges','Hydraulics, dispersion, K+ and empirical competition are never presented as site truth.',C.yellow);
  card(s,8.70,4.84,3.95,1.35,'Reproducible propagation','Seeded Monte Carlo · P05/P50/P95 · JSON/CSV/SVG',C.green);
- footer(s,8); notes(s,'Stress that reported intervals are input-range propagation, not total predictive uncertainty.');
+ footer(s,9); notes(s,'Stress that reported intervals are input-range propagation, not total predictive uncertainty.');
 }
 
 // 9 — Close

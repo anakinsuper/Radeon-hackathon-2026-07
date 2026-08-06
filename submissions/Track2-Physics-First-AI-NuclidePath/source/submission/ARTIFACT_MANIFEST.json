@@ -11,8 +11,8 @@
   "artifacts": [
     {
       "path": "submission/NuclidePath_Track2_Deck.pptx",
-      "bytes": 728166,
-      "sha256": "524552f96c9d7645c305eb2566129ff69ea2afff4577e4b2bbc6c09f23ebee2f"
+      "bytes": 754514,
+      "sha256": "60b222d9e45289fbe3cd806a3ca801e94b866b587ba294d497a7dd87f631101c"
     },
     {
       "path": "submission/NuclidePath_Project_Specification.pdf",
@@ -116,8 +116,8 @@
     },
     {
       "path": "submission/NuclidePath_Track2_Deck.pdf",
-      "bytes": 470875,
-      "sha256": "02dd1bd93b3cd1ea93ea76c7fa624b9a9e8616ec26324d59decad72fc7c8e89c"
+      "bytes": 480157,
+      "sha256": "bea796d4a3149672ba7d694cf0f1c893c99c80e5059bf9d3b323b2aa64b49524"
     }
   ],
   "source_context": {
