@@ -28,13 +28,19 @@ trap - EXIT
 # Reject absolute paths, parent traversal, and archive links before extracting.
 python3 - "$DESTINATION/download/$ARCHIVE" "$DESTINATION/source" <<'PY'
 import pathlib, sys, tarfile
+def _safe_filter(member, path):
+    if member.issym() or member.islnk():
+        raise tarfile.FilterError(f"link member rejected: {member.name}")
+    if not (member.isfile() or member.isdir()):
+        raise tarfile.FilterError(f"special member rejected: {member.name}")
+    return member
 archive, destination = sys.argv[1:]
 with tarfile.open(archive, "r:gz") as stream:
     for member in stream.getmembers():
         path = pathlib.PurePosixPath(member.name)
         if path.is_absolute() or ".." in path.parts or member.issym() or member.islnk():
             raise SystemExit(f"unsafe archive member: {member.name}")
-    stream.extractall(destination, filter="data")
+    stream.extractall(destination, filter=_safe_filter)
 PY
 
 SOURCE="$DESTINATION/source/phreeqc-$RELEASE"

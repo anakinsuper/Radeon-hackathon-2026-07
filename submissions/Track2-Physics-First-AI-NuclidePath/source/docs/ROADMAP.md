@@ -194,7 +194,7 @@ It must fail closed on invalid inputs and retain a validation trace.
 
 ### C. Report Safety Gate
 
-**Status: implemented (`report-safety-0.4`) on the versioned scenario publication path.** Artifacts are written only after the structured report passes. Broader free-form/NLP claim detection remains intentionally out of scope for this deterministic linter.
+**Status: implemented (`report-safety-0.5`) on the versioned scenario publication path.** Artifacts are written only after the structured report passes. Broader free-form/NLP claim detection remains intentionally out of scope for this deterministic linter.
 
 A deterministic report linter that blocks or flags:
 

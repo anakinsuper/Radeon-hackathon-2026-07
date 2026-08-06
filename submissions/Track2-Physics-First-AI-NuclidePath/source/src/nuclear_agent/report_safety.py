@@ -9,6 +9,33 @@ from typing import Any, Mapping
 _SCALAR = object()
 _SCALAR_LIST = object()
 
+# Fields that are physically numeric must be finite real numbers (not strings,
+# booleans, NaN or infinity). Review finding: the gate previously accepted
+# arbitrary scalars including strings, NaN and inf.
+_NUMERIC_FIELDS = {
+    "initial_concentration_bq_m3", "distance_m", "distribution_coefficient_m3_kg",
+    "bulk_density_kg_m3", "porosity", "groundwater_velocity_m_s", "dispersion_m2_s",
+    "potassium_mg_l", "competition_coefficient_l_mg", "half_life_years",
+    "effective_kd_m3_kg", "retardation_factor", "travel_time_s",
+    "sampled_max_concentration_bq_m3", "sampled_max_time_s", "time_s",
+    "concentration_bq_m3", "steady_state_fraction", "decay_factor", "cells",
+    "p05", "p50", "p95", "evaluation_times_s",
+}
+
+import math
+
+
+def _invalid_scalar(value: Any, path: str) -> bool:
+    """True when a scalar slot holds a non-finite or wrongly-typed value."""
+    if path.rstrip("0123456789[]._").endswith("evaluation_times_s") or path.endswith("evaluation_times_s"):
+        return False  # list handled by _SCALAR_LIST
+    field = path.rsplit(".", 1)[-1].split("[", 1)[0]
+    if field in _NUMERIC_FIELDS:
+        return (isinstance(value, bool)
+                or not isinstance(value, (int, float))
+                or not math.isfinite(float(value)))
+    return isinstance(value, (Mapping, list))
+
 
 class ReportSafetyError(ValueError):
     def __init__(self, result: dict[str, Any]) -> None:
@@ -17,7 +44,7 @@ class ReportSafetyError(ValueError):
 
 
 class ReportSafetyGate:
-    version = "report-safety-0.4"
+    version = "report-safety-0.5"
     _SCENARIO_FIELDS = {
         name: _SCALAR for name in (
             "scenario_id", "initial_concentration_bq_m3", "distance_m",
@@ -133,11 +160,16 @@ class ReportSafetyGate:
     ) -> list[str]:
         """Return dotted paths for keys outside the recursively closed report contract."""
         if schema is _SCALAR:
-            return [f"{path} (invalid report value)"] if isinstance(value, (Mapping, list)) else []
+            return [f"{path} (invalid report value)"] if _invalid_scalar(value, path) else []
         if schema is _SCALAR_LIST:
-            if not isinstance(value, list) or any(isinstance(item, (Mapping, list)) for item in value):
-                return [f"{path} (invalid report value)"]
-            return []
+            if not isinstance(value, list):
+                return [f"{path} (invalid report value: expected list)"]
+            bad = [
+                f"{path}[{index}] (invalid report value)"
+                for index, item in enumerate(value)
+                if _invalid_scalar(item, f"{path}[{index}]")
+            ]
+            return bad
         if isinstance(schema, list):
             if not isinstance(value, list):
                 return [f"{path} (invalid report value: expected list)"]

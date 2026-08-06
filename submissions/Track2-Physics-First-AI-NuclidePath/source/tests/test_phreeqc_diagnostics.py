@@ -135,3 +135,43 @@ def test_diagnostics_fails_closed_on_negative_chemistry_amount():
     parsed = replace(parsed, rows=(invalid_row,))
     with pytest.raises(ScenarioCompileError, match="non-negative"):
         diagnose_phreeqc_output(compiled, parsed)
+
+
+def test_oracle_rejects_row_off_the_transport_grid():
+    """Review finding: the parser verified shape but not semantic binding.
+
+    A row whose distance or time is not on the declared transport grid must be
+    rejected by the independent arithmetic oracle, even if it is structurally
+    well-formed.
+    """
+    compiled = compile_phreeqc_scenario(scenario())
+    # scenario(): 20 cells, 5 m cell length -> valid distances are 0..100 m
+    parsed_ok = parse_phreeqc_selected_output(
+        selected_output(
+            "1 transp 1 100.0 1000000.0 20 7.1 0.004 "
+            "0.001 0.0004 0.0009 0.0004 0.1 0.0"
+        )
+    )
+    assert evaluate_phreeqc_numerical_oracle(compiled, parsed_ok)["status"] == "passed"
+
+    # distance 101 m is off the grid (0..100 m in 5 m steps)
+    bad_distance = replace(
+        parsed_ok.rows[0], distance_m=101.0,
+    )
+    with pytest.raises(NumericalOracleError, match="off the transport grid"):
+        evaluate_phreeqc_numerical_oracle(compiled, replace(parsed_ok, rows=(bad_distance,)))
+
+    # time 1000500 s is off the time grid (time_step ~= 500000 s)
+    bad_time = replace(
+        parsed_ok.rows[0], time_s=1000500.0,
+    )
+    with pytest.raises(NumericalOracleError, match="off the transport time grid"):
+        evaluate_phreeqc_numerical_oracle(compiled, replace(parsed_ok, rows=(bad_time,)))
+
+    # decreasing step must be rejected
+    bad_step = replace(
+        parsed_ok.rows[0], step=19,
+    )
+    later = replace(parsed_ok.rows[0], step=18, time_s=1000000.0)
+    with pytest.raises(NumericalOracleError, match="step decreases"):
+        evaluate_phreeqc_numerical_oracle(compiled, replace(parsed_ok, rows=(bad_step, later)))

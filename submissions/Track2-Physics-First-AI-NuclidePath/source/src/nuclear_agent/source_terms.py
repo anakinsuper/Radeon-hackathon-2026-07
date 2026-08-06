@@ -132,6 +132,8 @@ class PiecewiseLinearSeries:
     quantity_unit: str = "concentration"
     version: str = SOURCE_CONTRACT_VERSION
     def __post_init__(self):
+        object.__setattr__(self, "times_s", tuple(self.times_s))
+        object.__setattr__(self, "values", tuple(self.values))
         _contract(self.version,self.quantity_unit)
         if len(self.times_s) < 2 or len(self.times_s) != len(self.values): raise ValueError("times_s and values must have equal length >= 2")
         for i, t in enumerate(self.times_s): _finite(f"times_s[{i}]", t, nonnegative=True)

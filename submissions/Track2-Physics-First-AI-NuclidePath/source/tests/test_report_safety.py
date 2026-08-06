@@ -18,7 +18,7 @@ def test_safety_gate_passes_traceable_screening_report_deterministically():
     report = build_report(PAYLOAD)
     first = ReportSafetyGate().check(report)
     second = ReportSafetyGate().check(report)
-    assert first == second == {"gate_version": "report-safety-0.4", "passed": True, "findings": []}
+    assert first == second == {"gate_version": "report-safety-0.5", "passed": True, "findings": []}
 
 
 @pytest.mark.parametrize("unsafe", [
@@ -163,6 +163,36 @@ def test_safety_gate_fails_closed_on_malformed_root_container(malformed):
         ReportSafetyGate().assert_safe(malformed)
 
 
+def test_safety_gate_rejects_non_finite_and_wrong_typed_numeric_fields():
+    """Review finding: arbitrary scalars (strings, NaN, inf) passed the gate."""
+    report = build_report(PAYLOAD)
+    # NaN in a physically numeric field
+    bad = deepcopy(report)
+    bad["scenario"]["porosity"] = float("nan")
+    result = ReportSafetyGate().check(bad)
+    assert result["passed"] is False
+    assert any("porosity" in f for f in result["findings"])
+
+    # infinity in a numeric field
+    bad = deepcopy(report)
+    bad["scenario"]["distance_m"] = float("inf")
+    result = ReportSafetyGate().check(bad)
+    assert result["passed"] is False
+
+    # string in a numeric field
+    bad = deepcopy(report)
+    bad["runs"][0]["points"][0]["concentration_bq_m3"] = "1e9"
+    result = ReportSafetyGate().check(bad)
+    assert result["passed"] is False
+    assert any("concentration_bq_m3" in f for f in result["findings"])
+
+    # bool in a numeric field
+    bad = deepcopy(report)
+    bad["scenario"]["porosity"] = True
+    result = ReportSafetyGate().check(bad)
+    assert result["passed"] is False
+
+
 def test_safety_gate_rejects_results_without_assumptions_or_provenance():
     report = build_report(PAYLOAD)
     del report["assumptions"]
@@ -185,7 +215,7 @@ def test_safety_gate_accepts_process_only_phreeqc_bridge_metadata():
         "execution_policy": "trusted manual workflow only",
     }
     assert ReportSafetyGate().check(report) == {
-        "gate_version": "report-safety-0.4",
+        "gate_version": "report-safety-0.5",
         "passed": True,
         "findings": [],
     }

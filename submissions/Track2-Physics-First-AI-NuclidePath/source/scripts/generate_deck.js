@@ -43,7 +43,7 @@ function notes(slide,body){ slide.addNotes(body); }
  text(s,'PHYSICS-FIRST AI',0.72,6.55,3.4,0.28,12,C.text,{bold:true}); text(s,'Stefano Rigante · Nuclear engineer',0.72,6.86,3.8,0.24,10,C.muted);
  s.addImage({path:asset('dashboard.png'),x:5.48,y:0.62,w:7.35,h:4.60,altText:'NuclidePath verified local dashboard'});
  rect(s,5.48,5.25,7.35,1.27,C.layer,C.line);
- stat(s,5.77,5.46,2.0,'5/5','Track 2 capabilities',C.green); stat(s,8.15,5.46,2.0,'231','AMD core snapshot',C.blue); stat(s,10.45,5.46,2.0,'373/15','latest PR gate',C.orange);
+ stat(s,5.77,5.46,2.0,'5/5','Track 2 capabilities',C.green); stat(s,8.15,5.46,2.0,'231','AMD core snapshot',C.blue); stat(s,10.45,5.46,2.0,'376/15','latest PR gate',C.orange);
  notes(s,'Open with the core promise: AI coordinates the workflow, but deterministic code owns every physical number.');
 }
 

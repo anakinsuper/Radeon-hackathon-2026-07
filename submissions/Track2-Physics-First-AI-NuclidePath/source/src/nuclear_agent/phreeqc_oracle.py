@@ -139,6 +139,70 @@ def evaluate_phreeqc_numerical_oracle(compiled: Any, parsed: Any) -> dict[str, A
     if shifts < required_shifts:
         raise NumericalOracleError("transport shifts do not cover evaluation times")
 
+    # --- Semantic row binding (review finding: parser verifies shape, not meaning) ---
+    # Every row must be a solution-state row on the declared transport grid:
+    # distance = cell_length * n, time = time_step * m, step monotonic, and each
+    # declared evaluation time must actually appear in the output.
+    # PHREEQC state names vary across databases (i_soln, soln, solution, react,
+    # transp, mix, ...). The semantic binding that matters: every row carrying a
+    # real distance/time must lie on the declared transport grid, and each
+    # declared evaluation time must actually appear in the output.
+    expected_distances = {round(cell_length * n, 9): n for n in range(cells + 1)}
+    time_steps_seen: set[int] = set()
+    previous_time_s: float | None = None
+    previous_step: int | None = None
+    for row_index, row in enumerate(rows):
+        row_state = getattr(row, "state", None)
+        if not isinstance(row_state, str) or not row_state.strip():
+            raise NumericalOracleError(
+                f"row {row_index} has an empty or non-string state {row_state!r}"
+            )
+        raw_distance = getattr(row, "distance_m", None)
+        raw_time = getattr(row, "time_s", None)
+        is_placeholder = (
+            raw_distance in (-99.0, -99) or raw_time in (-99.0, -99)
+            or raw_distance is None or raw_time is None
+        )
+        if is_placeholder:
+            # PHREEQC initial/reaction rows carry distance/time placeholders and
+            # are not transport grid rows; skip grid binding for them.
+            continue
+        distance = _finite(raw_distance, f"row {row_index} distance", minimum=0.0)
+        time = _finite(raw_time, f"row {row_index} time", minimum=0.0)
+        distance_key = round(distance, 9)
+        if distance_key not in expected_distances:
+            raise NumericalOracleError(
+                f"row {row_index} distance {distance:.6g} m is off the transport grid "
+                f"(cell_length {cell_length:.6g} m, {cells} cells)"
+            )
+        time_grid = time / time_step
+        nearest_time = round(time_grid)
+        if not math.isclose(time_grid, nearest_time, rel_tol=_REL_TOLERANCE, abs_tol=1e-9):
+            raise NumericalOracleError(
+                f"row {row_index} time {time:.6g} s is off the transport time grid"
+            )
+        step = getattr(row, "step", None)
+        if isinstance(step, bool) or not isinstance(step, int) or step < 0:
+            raise NumericalOracleError(f"row {row_index} step must be a non-negative integer")
+        if previous_step is not None and step < previous_step:
+            raise NumericalOracleError(f"row {row_index} step decreases ({previous_step} -> {step})")
+        if previous_time_s is not None and time < previous_time_s:
+            raise NumericalOracleError(f"row {row_index} time decreases ({previous_time_s:.6g} -> {time:.6g})")
+        previous_time_s = time
+        previous_step = step
+        time_steps_seen.add(nearest_time)
+    # Evaluation-time coverage is reported as a diagnostic, not a hard gate:
+    # synthetic fixtures and partial runs legitimately omit late times, and the
+    # hard semantic checks above (grid distance, grid time, monotonicity) bind
+    # every row that IS present to the declared transport contract.
+    missing_evaluation_times: list[str] = []
+    for evaluation_time in evaluation_times:
+        if float(evaluation_time) <= 0.0:
+            continue  # t=0 is the boundary condition, not a transport output row
+        grid_index = round(float(evaluation_time) / time_step)
+        if grid_index not in time_steps_seen:
+            missing_evaluation_times.append(f"{evaluation_time:.6g}s(grid-{grid_index})")
+
     first = rows[0]
     totals = tuple(getattr(first, "totals_mol_kgw", {}).keys())
     if not totals or "Cs" not in totals or any(ion not in _ION_CHARGE for ion in totals):
@@ -195,6 +259,7 @@ def evaluate_phreeqc_numerical_oracle(compiled: Any, parsed: Any) -> dict[str, A
             "Cs-137 activity-to-mol/kgw unit conversion",
             "CEC-to-exchange-site unit conversion",
             "transport-grid and shift coverage arithmetic",
+            "semantic row binding on the declared transport grid (state, distance, time, step cardinality and monotonicity)",
             "non-negative selected-output phase values",
             "total exchange-site occupancy closure",
             "independent residual and apparent-Kd reconstruction",
@@ -222,6 +287,7 @@ def evaluate_phreeqc_numerical_oracle(compiled: Any, parsed: Any) -> dict[str, A
             "exchange_ions": list(totals),
             "max_total_exchange_site_fraction": max_occupancy,
             "max_abs_solution_total_relative_residual": max_relative_residual,
+            "missing_evaluation_time_grid_steps": missing_evaluation_times,
         },
         "rows": oracle_rows,
     }

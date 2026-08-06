@@ -18,6 +18,7 @@ from dataclasses import dataclass
 import hashlib
 import hmac
 import json
+import re
 import math
 import statistics
 from typing import Any, Mapping, Sequence
@@ -175,6 +176,7 @@ class ObservationDataset:
             raise ScientificValidationError("provenance must be an object")
         _keys(provenance, {
             "source", "license", "method", "units", "retrieved_at", "permission",
+            "dataset_sha256",
         }, "provenance")
         required_provenance = ("source", "license", "method", "units", "retrieved_at", "permission")
         parsed_provenance = {
@@ -187,6 +189,26 @@ class ObservationDataset:
             raise ScientificValidationError(
                 "measured_traceable data require documented or public permission"
             )
+        if data_status == "measured_traceable":
+            # Review finding: a self-declared data_status must not be enough to
+            # promote a model. Require a public, independently checkable source
+            # URL and a dataset digest so the claim is verifiable, not merely
+            # asserted. Without both, the data cannot be treated as measured.
+            source = parsed_provenance["source"]
+            if not source.startswith(("https://", "http://")):
+                raise ScientificValidationError(
+                    "measured_traceable data require a public http(s) provenance.source URL"
+                )
+            dataset_sha256 = provenance.get("dataset_sha256")
+            if not isinstance(dataset_sha256, str) or not re.fullmatch(r"[0-9a-f]{64}", dataset_sha256):
+                raise ScientificValidationError(
+                    "measured_traceable data require provenance.dataset_sha256 (64 hex chars)"
+                )
+            method = parsed_provenance["method"].lower()
+            if not any(token in method for token in ("experiment", "measure", "field", "laboratory", "lab ", "batch")):
+                raise ScientificValidationError(
+                    "measured_traceable data require an experimental/measurement method description"
+                )
 
         raw_observations = value.get("observations")
         if isinstance(raw_observations, (str, bytes)) or not isinstance(raw_observations, Sequence):

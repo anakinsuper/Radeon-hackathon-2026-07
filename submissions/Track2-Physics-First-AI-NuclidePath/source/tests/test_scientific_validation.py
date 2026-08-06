@@ -108,6 +108,36 @@ def test_dataset_rejects_split_leakage_and_measured_data_without_permission():
         ObservationDataset.from_mapping(payload)
 
 
+def test_measured_data_requires_verifiable_source_url_and_digest():
+    """A self-declared measured_traceable status must not promote a model.
+
+    The reviewer mutated a synthetic fixture to data_status=measured_traceable
+    with permission=public and the gate granted EXPERIMENTALLY_VALIDATED.
+    Fail closed: measured data require a public source URL, a 64-hex digest
+    and an experimental method description.
+    """
+    payload = _dataset_payload()
+    payload["data_status"] = "measured_traceable"
+    payload["provenance"]["permission"] = "public"
+    # missing source URL + digest -> rejected
+    with pytest.raises(ScientificValidationError, match="http"):
+        ObservationDataset.from_mapping(payload)
+
+    payload["provenance"]["source"] = "https://doi.org/10.1016/j.gea.2023.01.001"
+    payload["provenance"]["dataset_sha256"] = "abc"
+    with pytest.raises(ScientificValidationError, match="dataset_sha256"):
+        ObservationDataset.from_mapping(payload)
+
+    payload["provenance"]["dataset_sha256"] = "a" * 64
+    # method still says "deterministic analytic construction" -> rejected
+    with pytest.raises(ScientificValidationError, match="method"):
+        ObservationDataset.from_mapping(payload)
+
+    payload["provenance"]["method"] = "laboratory batch sorption experiment"
+    dataset = ObservationDataset.from_mapping(payload)
+    assert dataset.data_status == "measured_traceable"
+
+
 def test_group_split_is_deterministic_and_disjoint():
     dataset = ObservationDataset.from_mapping(_dataset_payload())
     first = deterministic_group_split(dataset.observations, dataset.dataset_id)

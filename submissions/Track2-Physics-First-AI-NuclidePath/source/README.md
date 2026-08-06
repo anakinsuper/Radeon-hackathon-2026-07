@@ -10,7 +10,7 @@ Team: **Physics-First AI** · Application: **NuclidePath**
 > K-free Central Oklahoma fixtures, dynamic per-ion diagnostics and report
 > integration, the dependency-free traceable Cs calibration/hold-out gate, and
 > the separate EPA/Fuller/Dubus external Cs benchmark registry.
-> The latest GitHub-hosted CI gate passed with `373 passed, 15 skipped`.
+> The latest GitHub-hosted CI gate passed with `376 passed, 15 skipped`.
 > This is GitHub-hosted CI evidence. A **post-merge AMD/ROCm rerun of the full
 > current `main` tree** (5 August 2026) passed **388 tests,
 > 2 skipped** (external-PHREEQC only) under `artifacts/amd-2026-08-05/post-merge/`.
@@ -123,6 +123,7 @@ Preceding merged-bridge integration checkpoint:
 ```
 
 Core-platform evidence snapshot:
+```text
 231 passed (AMD ROCm)
 ```
 
@@ -245,7 +246,7 @@ A full run creates:
 | `memory.jsonl` | local redacted multi-turn session state |
 | `manifest.json` | SHA-256 checksum for every other artifact |
 
-A clean installed-wheel run includes every current bundled scientific dataset. The submission-level manifest at `submission/ARTIFACT_MANIFEST.json` verifies twenty-two tracked core Track 2 editorial, visual and AMD evidence artifacts; it does not claim a trusted PHREEQC multicomponent run.
+A clean installed-wheel run includes the bundled core scientific data shipped inside `src/nuclear_agent/data/` (knowledge corpus, core Cs-137 scenarios and library variants, GCS/illite parameters, molar masses and the primary-paper rock validation set). The optional PHREEQC multicomponent scenarios under `scenarios/` and the external benchmark CSVs under `data/benchmarks/` live in the repository and are not part of the wheel; the submission-level manifest at `submission/ARTIFACT_MANIFEST.json` verifies twenty-two tracked core Track 2 editorial, visual and AMD evidence artifacts, and does not claim a trusted PHREEQC multicomponent run.
 
 ### Versioned scenario library
 

@@ -43,6 +43,8 @@ class PathNetwork:
     receptors: Mapping[str, str] = None
     handoff: HandoffAssumptions = HandoffAssumptions()
     def __post_init__(self):
+        object.__setattr__(self, "segments", tuple(self.segments))
+        object.__setattr__(self, "edges", tuple(tuple(e) if isinstance(e, (list, tuple)) else e for e in self.edges))
         if not self.segments: raise ValueError("segment network must not be empty")
         ids = [s.segment_id for s in self.segments]
         if len(set(ids)) != len(ids): raise ValueError("segment IDs must be unique")
