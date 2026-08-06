@@ -1,6 +1,6 @@
 {
   "schema_version": "nuclidepath-contest-manifest-2.0",
-  "source_release": "c1cd1f2",
+  "source_release": "7ebb8e7",
   "contest_artifacts": [
     {
       "path": "NuclidePath_Project_Specification.pdf",

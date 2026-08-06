@@ -12,7 +12,7 @@ NuclidePath is a private, physics-first AI agent for traceable Cs-137 groundwate
 
 | Item | URL |
 |---|---|
-| Source code | [`source/`](./source/) — complete current tree copied from private `main` (release `c1cd1f2`) |
+| Source code | [`source/`](./source/) — complete current tree copied from private `main` (release `7ebb8e7`) |
 | Demo video | `VIDEO_URL_PENDING_UPLOAD` |
 | Project specification | [`NuclidePath_Project_Specification.pdf`](./NuclidePath_Project_Specification.pdf) |
 | Presentation deck | [`NuclidePath_Track2_Deck.pptx`](./NuclidePath_Track2_Deck.pptx) |
