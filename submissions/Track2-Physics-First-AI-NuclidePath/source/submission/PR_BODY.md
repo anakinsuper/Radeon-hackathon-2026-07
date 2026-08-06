@@ -135,4 +135,4 @@ run on `refs/heads/main`.
 - [x] Complete current source copied into the contest submission.
 - [x] Contest package regenerated/synchronized from the selected current
       source snapshot.
-- [ ] Open the official PR only after the participant authorizes publication.
+- [x] Official PR opened after participant authorized publication (6 Aug 2026).

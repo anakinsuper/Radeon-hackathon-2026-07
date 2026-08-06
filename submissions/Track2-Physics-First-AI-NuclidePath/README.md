@@ -12,7 +12,7 @@ NuclidePath is a private, physics-first AI agent for traceable Cs-137 groundwate
 
 | Item | URL |
 |---|---|
-| Source code | [`source/`](./source/) — complete current tree copied from private `main` (release `dad1a25`) |
+| Source code | [`source/`](./source/) — complete current tree copied from private `main` (release `0366bc2`) |
 | Demo video | [Google Drive](https://drive.google.com/file/d/19fHhF9CXuQyX2jn6m9DFrUuHR6EyQD-1/view?usp=drivesdk) |
 | Project specification | [`NuclidePath_Project_Specification.pdf`](./NuclidePath_Project_Specification.pdf) |
 | Presentation deck | [`NuclidePath_Track2_Deck.pptx`](./NuclidePath_Track2_Deck.pptx) |
@@ -54,7 +54,7 @@ nuclear-emergency-demo --samples 128 --output results/demo
 nuclear-emergency-dashboard --host 127.0.0.1 --port 8080 --samples 128
 ```
 
-The contest-local manifest (`nuclidepath-contest-manifest-2.0`) verifies the deck, specification and the complete source copy under `source/`. The source copy is a clean current-`main` tree (release `dad1a25`) excluding `.git`, `.venv`, `node_modules`, `build`, `dist`, `results` and `private-deliverables`. The private `main` retains the separate ten-entry evidence manifest covering screenshots and AMD runtime evidence. The clean wheel includes the primary-paper rock validation dataset used by the dashboard.
+The contest-local manifest (`nuclidepath-contest-manifest-2.0`) verifies the deck, specification and the complete source copy under `source/`. The source copy is a clean current-`main` tree (release `0366bc2`) excluding `.git`, `.venv`, `node_modules`, `build`, `dist`, `results` and `private-deliverables`. The private `main` retains the separate ten-entry evidence manifest covering screenshots and AMD runtime evidence. The clean wheel includes the primary-paper rock validation dataset used by the dashboard.
 
 ## Scientific scope
 
