@@ -61,3 +61,14 @@ The contest-local manifest (`nuclidepath-contest-manifest-2.0`) verifies the dec
 NuclidePath is a transparent research screening demonstration—not an operational emergency-response system, dose model or site-validated digital twin. The primary Cs GCS covers K/Na competition on three illite site types and NH4 only on frayed-edge sites. Sr-90 remains a provenance-bearing linear-Kd path; unsupported Sr/Ca/Mg coefficients are not invented. The rock reconstructions are paper-input predictions, not digitized experimental validation. The local LLM never generates or modifies physical values.
 
 The current `main` also includes an opt-in PHREEQC multicomponent chemistry bridge (schema `nuclidepath-phreeqc-chemistry-2`) with an independent arithmetic oracle, K-free Central Oklahoma Na-Ca-Mg fixtures and a dependency-free traceable Cs calibration/hold-out gate. PHREEQC remains **PROCESS-QUALIFIED ONLY**: no calibrated multi-cation Cs chemistry, experimental agreement, GCS equivalence or regulatory validity is claimed. The demo video shows the canonical core Track 2 path and does not display the optional PHREEQC bridge.
+
+## Recent extensions (post-merge work)
+
+The latest work adds four deterministic, auditable layers around the canonical screening path:
+
+- **PHREEQC scenario compiler** — maps declared water chemistry, CEC and Cs plus one or more K/Na/Ca/Mg exchange coefficients into PHREEQC `SOLUTION`/`EXCHANGE`/`SELECTED_OUTPUT`/`TRANSPORT` input (schema `nuclidepath-phreeqc-chemistry-2`).
+- **Independent arithmetic oracle** — machine-readable checks for units, grid mapping, non-negativity and exchange-site occupancy, persisted in diagnostics and replay JSON.
+- **Calibration/hold-out gate** — dependency-free traceable Cs exchange calibration contract with group-disjoint splits and fail-closed promotion; no experimental dataset is bundled and no promotion claim is made.
+- **External Cs benchmark registry** — separate EPA/Fuller/Dubus material with source digests, CSV integrity checks and `calibration_eligible: false`.
+
+A **post-merge AMD/ROCm rerun of the full current `main` tree** (5 August 2026) passed **388 tests, 2 skipped** (only the external-PHREEQC tests), with the FP64 platform benchmark reproducing 1.82 ms median / 132.8× / `7.94e-14` max error under `artifacts/amd-2026-08-05/post-merge/`. The canonical `transport-prototype-0.3` path remains authoritative; the bridge is opt-in and does not replace it.
