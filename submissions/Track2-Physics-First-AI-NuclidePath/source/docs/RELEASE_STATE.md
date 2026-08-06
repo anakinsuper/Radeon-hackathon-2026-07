@@ -100,7 +100,7 @@ checkpoint explicitly named in those documents.
 The private source repository is not judge-accessible by itself. The prepared
 public contest-fork branch
 `anakinsuper/Radeon-hackathon-2026-07:submission/track2-physics-first-ai-nuclidepath`
-is synchronized to the current `main` documentation head `7ebb8e7` (code-bearing
+is synchronized to the current `main` documentation head `f18536a` (code-bearing
 checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24). Its contest
 package now contains the complete current source under
 `submissions/Track2-Physics-First-AI-NuclidePath/source/`, the updated

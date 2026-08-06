@@ -94,7 +94,8 @@ function notes(slide,body){ slide.addNotes(body); }
  stat(s,10.05,1.93,2.2,'0','LLM physics values',C.green);
  card(s,7.48,3.18,5.18,1.25,'Independent analytical cases','Ogata–Banks limit · source boundary · reactive steady state · finite rejection',C.blue);
  card(s,7.48,4.68,5.18,1.25,'Explicit limitation','Constant-source 1-D screening — not a dose code, regulatory model or calibrated site prediction.',C.yellow);
- footer(s,5); notes(s,'Describe the formulas and say validation means software/formula verification, not regulatory validation.');
+ card(s,7.48,6.08,5.18,0.85,'Multicomponent bridge (opt-in)','GCS K/Na competition + NH₄ on FES; extended K/Na/Ca/Mg path is process-qualified, not promoted.',C.purple);
+ footer(s,5); notes(s,'Describe the formulas and say validation means software/formula verification, not regulatory validation. The multicomponent K/Na/Ca/Mg bridge is opt-in and process-qualified only; the canonical Cs–K GCS path remains authoritative.');
 }
 
 // 5.5 — Recent extensions (post-merge work)

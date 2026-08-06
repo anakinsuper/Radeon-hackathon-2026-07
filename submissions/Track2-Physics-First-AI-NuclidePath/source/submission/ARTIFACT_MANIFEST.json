@@ -11,8 +11,8 @@
   "artifacts": [
     {
       "path": "submission/NuclidePath_Track2_Deck.pptx",
-      "bytes": 754514,
-      "sha256": "60b222d9e45289fbe3cd806a3ca801e94b866b587ba294d497a7dd87f631101c"
+      "bytes": 757323,
+      "sha256": "579d6fea7d9389efb54863ac3c26e1fc491878ada14701d08fa0802fd7aa38ee"
     },
     {
       "path": "submission/NuclidePath_Project_Specification.pdf",
@@ -116,8 +116,8 @@
     },
     {
       "path": "submission/NuclidePath_Track2_Deck.pdf",
-      "bytes": 480157,
-      "sha256": "bea796d4a3149672ba7d694cf0f1c893c99c80e5059bf9d3b323b2aa64b49524"
+      "bytes": 481533,
+      "sha256": "1aa0a4254a9e9fd5ba28886316712f59a71ea4ba410b43167c452e5a3a9ddc71"
     }
   ],
   "source_context": {
@@ -126,8 +126,8 @@
     "default_branch": "main",
     "current_feature_state": "PHREEQC schema 2 multicomponent bridge with independent arithmetic oracle, K-free Na-Ca-Mg fixtures and dependency-free traceable Cs calibration/hold-out gate; canonical transport unchanged; separate EPA/Fuller/Dubus external Cs benchmark registry with calibration_eligible=false",
     "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
-    "public_contest_branch_source_release": "7ebb8e7 (current main documentation head, includes deck Recent-extensions slide; code-bearing checkpoint 2b256e322eaa8ca45a5b939fdecad09d66019b0c)",
-    "public_contest_branch_status": "synchronized to current main source release; complete source copied into contest package under submissions/Track2-Physics-First-AI-NuclidePath/source/; contest-local manifest v2.0; public video URL pending; source copy at 7ebb8e7",
+    "public_contest_branch_source_release": "f18536a (current main documentation head, includes deck multicomponent-bridge card; code-bearing checkpoint 2b256e322eaa8ca45a5b939fdecad09d66019b0c)",
+    "public_contest_branch_status": "synchronized to current main source release; complete source copied into contest package under submissions/Track2-Physics-First-AI-NuclidePath/source/; contest-local manifest v2.0; public video URL pending; source copy at f18536a",
     "artifact_generation_base": "a94c76ee078a7bd24feb98965a6682a274781deb",
     "current_main_head_policy": "fetch refs/heads/main directly; documentation-only merges may advance the branch",
     "last_code_bearing_main_checkpoint": "2b256e322eaa8ca45a5b939fdecad09d66019b0c (PR #24 merge; PR head 58656141db4a3a17d49a7e0a2f9ffda20f434130; fetch refs/heads/main directly for current documentation HEAD)",
