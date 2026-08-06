@@ -1,6 +1,6 @@
 {
   "schema_version": "nuclidepath-contest-manifest-2.0",
-  "source_release": "216260583561d88cc4ec60dd247c8c1509834404",
+  "source_release": "dad1a25f2e6a444df97f4e84cd26054edc48e454",
   "contest_artifacts": [
     {
       "path": "NuclidePath_Project_Specification.pdf",
@@ -26,15 +26,14 @@
     "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
     "complete_source_copied": true,
     "source_copy_location": "submissions/Track2-Physics-First-AI-NuclidePath/source/",
-    "source_copy_release": "216260583561d88cc4ec60dd247c8c1509834404",
+    "source_copy_release": "dad1a25f2e6a444df97f4e84cd26054edc48e454",
     "notes": "source copy excludes .git, .venv, node_modules, build, dist, results, private-deliverables"
   },
   "submission_state": {
-    "video_url": "VIDEO_URL_PENDING_UPLOAD",
+    "video_url": "https://drive.google.com/file/d/19fHhF9CXuQyX2jn6m9DFrUuHR6EyQD-1/view?usp=drivesdk",
     "human_gates": [
-      "eligibility confirmation",
-      "judge-accessible video URL",
-      "final review of official contest PR after video URL insertion"
+      "eligibility confirmation (Luma registration + AMD Developer Program)",
+      "final review of official contest PR before opening"
     ]
   }
 }

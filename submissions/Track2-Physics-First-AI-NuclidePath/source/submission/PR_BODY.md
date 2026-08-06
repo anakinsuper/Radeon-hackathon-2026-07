@@ -84,15 +84,15 @@ trusted self-hosted PHREEQC run.
 
 ### Demo video
 
-`VIDEO_URL_PENDING_UPLOAD`
+`https://drive.google.com/file/d/19fHhF9CXuQyX2jn6m9DFrUuHR6EyQD-1/view?usp=drivesdk`
 
 The private core-path master is 4:36 at 1920×1080 and 30 fps with H.264/AAC
 narration and embedded English subtitles. It demonstrates the canonical
-agent/transport workflow; it does not show the later PHREEQC bridge. A public
-URL must be uploaded and verified by the participant before it is inserted
-into an official PR.
+agent/transport workflow; it does not show the later PHREEQC bridge. The
+public judge-accessible copy is hosted on Google Drive (SHA-256
+`47dc62f419c778d19af5724314a5d3bf3e04c3ee2175349897393162977c0d80`).
 
-The contest branch now stores the editorial package and a complete copied source tree under `submissions/Track2-Physics-First-AI-NuclidePath/source/`, synchronized from private `main` (verified byte-identical to head `df8f028` on 6 August 2026, excluding the internal `.hermes/` planning directory). The contest-local manifest is `nuclidepath-contest-manifest-2.0` and the complete current source is judge-accessible inside the submission. The public video URL remains the only missing submission link.
+The contest branch now stores the editorial package and a complete copied source tree under `submissions/Track2-Physics-First-AI-NuclidePath/source/`, synchronized from private `main` (verified byte-identical to head `df8f028` on 6 August 2026, excluding the internal `.hermes/` planning directory). The contest-local manifest is `nuclidepath-contest-manifest-2.0` and the complete current source is judge-accessible inside the submission.
 
 ### Reproduce locally
 
@@ -129,10 +129,10 @@ run on `refs/heads/main`.
 
 ### Pre-open gates
 
-- [ ] Replace `VIDEO_URL_PENDING_UPLOAD` with a public judge-accessible URL.
+- [x] Public judge-accessible video URL inserted and verified (Google Drive,
+      SHA-256 `47dc62f419c778d19af5724314a5d3bf3e04c3ee2175349897393162977c0d80`).
 - [ ] Confirm Luma registration and AMD Developer Program eligibility.
-- [ ] Make the complete current source public or copy it into the contest
-      submission.
-- [ ] Regenerate/synchronize the contest package from the selected current
+- [x] Complete current source copied into the contest submission.
+- [x] Contest package regenerated/synchronized from the selected current
       source snapshot.
 - [ ] Open the official PR only after the participant authorizes publication.

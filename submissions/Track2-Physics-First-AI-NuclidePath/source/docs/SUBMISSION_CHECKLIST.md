@@ -82,8 +82,9 @@ require the participant's explicit publication or eligibility decision.
       embedded English subtitles.
 - [x] Video script explicitly separates recorded core path from current
       PHREEQC source extension.
-- [ ] Judge-accessible public video URL; placeholder remains
-      `VIDEO_URL_PENDING_UPLOAD`.
+- [x] Judge-accessible public video URL inserted and verified:
+      `https://drive.google.com/file/d/19fHhF9CXuQyX2jn6m9DFrUuHR6EyQD-1/view?usp=drivesdk`
+      (SHA-256 `47dc62f419c778d19af5724314a5d3bf3e04c3ee2175349897393162977c0d80`).
 - [ ] Re-record video only if the PHREEQC bridge is intended to be part of the
       visual claim; it is not required for the current core-path evidence.
 

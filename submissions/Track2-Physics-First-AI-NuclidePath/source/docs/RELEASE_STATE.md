@@ -127,8 +127,10 @@ specification PDF and deck, and the contest-local manifest
 
 The internal deck/PDF/video package is a core Track 2 evidence package. The
 video is 4:36, 1920×1080, 30 fps, H.264/AAC with embedded English subtitles;
-the recorded path does not show the later PHREEQC bridge. The video URL remains
-`VIDEO_URL_PENDING_UPLOAD`.
+the recorded path does not show the later PHREEQC bridge. The public
+judge-accessible copy is
+`https://drive.google.com/file/d/19fHhF9CXuQyX2jn6m9DFrUuHR6EyQD-1/view?usp=drivesdk`
+(SHA-256 `47dc62f419c778d19af5724314a5d3bf3e04c3ee2175349897393162977c0d80`).
 
 The internal deck, specification PDF, contact sheets and current video cards were regenerated from this verified source snapshot; their byte sizes and SHA-256 values are recorded in `submission/ARTIFACT_MANIFEST.json`. The visual package intentionally remains core-path evidence and does not claim to show or execute the PHREEQC bridge.
 

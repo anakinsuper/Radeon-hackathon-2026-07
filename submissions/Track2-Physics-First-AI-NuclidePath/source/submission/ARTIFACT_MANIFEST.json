@@ -192,11 +192,10 @@
     }
   },
   "submission_state": {
-    "video_url": "VIDEO_URL_PENDING_UPLOAD",
+    "video_url": "https://drive.google.com/file/d/19fHhF9CXuQyX2jn6m9DFrUuHR6EyQD-1/view?usp=drivesdk",
     "human_gates": [
-      "eligibility confirmation",
-      "judge-accessible video URL",
-      "final review of official contest PR after video URL insertion"
+      "eligibility confirmation (Luma registration + AMD Developer Program)",
+      "final review of official contest PR before opening"
     ]
   },
   "artifact_generation": {
