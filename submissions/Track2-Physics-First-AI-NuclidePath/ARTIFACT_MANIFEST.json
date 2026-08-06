@@ -1,6 +1,6 @@
 {
   "schema_version": "nuclidepath-contest-manifest-2.0",
-  "source_release": "3a83c6b",
+  "source_release": "a9b65b5",
   "contest_artifacts": [
     {
       "path": "NuclidePath_Project_Specification.pdf",
@@ -26,7 +26,7 @@
     "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
     "complete_source_copied": true,
     "source_copy_location": "submissions/Track2-Physics-First-AI-NuclidePath/source/",
-    "source_copy_release": "3a83c6b (current main head; deck multicomponent card + spec cover multicomponent note)",
+    "source_copy_release": "a9b65b5 (current main documentation head; deck multicomponent card + spec cover multicomponent note)",
     "notes": "source copy excludes .git, .venv, node_modules, build, dist, results, private-deliverables"
   },
   "submission_state": {
