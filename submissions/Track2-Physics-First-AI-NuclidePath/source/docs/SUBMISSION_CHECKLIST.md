@@ -91,7 +91,7 @@ require the participant's explicit publication or eligibility decision.
 - [x] Public contest fork and prepared branch exist; contest artifacts are under
       `submissions/Track2-Physics-First-AI-NuclidePath/`.
 - [x] Prepared contest branch synchronized with current `main` documentation head
-      `da84ab3` (code-bearing checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24);
+      `500a21c` (code-bearing checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24);
       its contest-local manifest is `nuclidepath-contest-manifest-2.0`.
 - [x] Complete current source copied to the contest submission under
       `submissions/Track2-Physics-First-AI-NuclidePath/source/`.

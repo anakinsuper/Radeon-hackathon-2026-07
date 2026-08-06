@@ -89,7 +89,7 @@ agent/transport workflow; it does not show the later PHREEQC bridge. A public
 URL must be uploaded and verified by the participant before it is inserted
 into an official PR.
 
-The contest branch now stores the editorial package and a complete copied source tree under `submissions/Track2-Physics-First-AI-NuclidePath/source/`, synchronized from private `main` at `da84ab3` (current documentation head, which includes the deck with the multicomponent bridge card and the spec cover with the multicomponent note; code-bearing checkpoint `2b256e3` from PR #24). The contest-local manifest is `nuclidepath-contest-manifest-2.0` and the complete current source is judge-accessible inside the submission. The public video URL remains the only missing submission link.
+The contest branch now stores the editorial package and a complete copied source tree under `submissions/Track2-Physics-First-AI-NuclidePath/source/`, synchronized from private `main` at `500a21c` (current documentation head, which includes the deck with the multicomponent bridge card and the spec cover with the multicomponent note; code-bearing checkpoint `2b256e3` from PR #24). The contest-local manifest is `nuclidepath-contest-manifest-2.0` and the complete current source is judge-accessible inside the submission. The public video URL remains the only missing submission link.
 
 ### Reproduce locally
 
