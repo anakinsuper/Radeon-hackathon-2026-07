@@ -59,7 +59,7 @@ device-resident primary-GCS → transport → receptor pipeline evaluated 147,45
 concentrations in a 1.784 ms median, 137.09× faster than scalar, with
 maximum relative concentration error `7.94e-14`.
 
-A **post-merge AMD/ROCm rerun of the full current `main` tree** was executed on
+A **post-merge AMD/ROCm rerun of the `main` tree at head `b6d4c61e74`** was executed on
 5 August 2026 (gfx1100, ROCm 7.2.1, torch `2.9.1+gitff65f5b`, head `b6d4c61e74`):
 **388 tests passed, 2 skipped** (only the external-PHREEQC solver tests), with
 the FP64 platform benchmark reproducing 1.82 ms median / 132.8× speedup /
@@ -72,7 +72,10 @@ The preceding merged-bridge integration checkpoint is PR #15 CI run
 Python 3.11.15, 364 passed, 15 skipped, workflow policy/wheel/whitespace PASS.
 The latest code-bearing registry checkpoint is PR #24 CI run
 [30993946602](https://github.com/anakinsuper/NuclidePath/actions/runs/30993946602):
-373 passed, 15 skipped, with workflow policy/wheel/whitespace PASS. The preceding
+373 passed, 15 skipped, with workflow policy/wheel/whitespace PASS. Two later
+review-hardening commits `3714bf8` and `1605cc6` brought the current `main` head
+`df8f028` to run `31111109865`: 377 passed, 15 skipped, with the same gates PASS.
+The preceding
 calibration-gate checkpoint is PR #22 CI run
 [30936374478](https://github.com/anakinsuper/NuclidePath/actions/runs/30936374478):
 370 passed, 15 skipped. These are
@@ -89,7 +92,7 @@ agent/transport workflow; it does not show the later PHREEQC bridge. A public
 URL must be uploaded and verified by the participant before it is inserted
 into an official PR.
 
-The contest branch now stores the editorial package and a complete copied source tree under `submissions/Track2-Physics-First-AI-NuclidePath/source/`, synchronized from private `main` at `1605cc6` (current documentation head, which includes the deck with the multicomponent bridge card and the spec cover with the multicomponent note; code-bearing checkpoint `2b256e3` from PR #24). The contest-local manifest is `nuclidepath-contest-manifest-2.0` and the complete current source is judge-accessible inside the submission. The public video URL remains the only missing submission link.
+The contest branch now stores the editorial package and a complete copied source tree under `submissions/Track2-Physics-First-AI-NuclidePath/source/`, synchronized from private `main` (verified byte-identical to head `df8f028` on 6 August 2026, excluding the internal `.hermes/` planning directory). The contest-local manifest is `nuclidepath-contest-manifest-2.0` and the complete current source is judge-accessible inside the submission. The public video URL remains the only missing submission link.
 
 ### Reproduce locally
 

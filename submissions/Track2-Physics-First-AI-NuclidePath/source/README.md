@@ -5,15 +5,20 @@
 AMD AI DevMaster Hackathon 2026 · **Track 2 — Development & Local Deployment of Private AI Agents**
 Team: **Physics-First AI** · Application: **NuclidePath**
 
-> **Current source state (5 August 2026):** `main` includes the merged
+> **Current source state (6 August 2026):** `main` includes the merged
 > schema-2 multicomponent PHREEQC bridge, independent arithmetic oracle,
 > K-free Central Oklahoma fixtures, dynamic per-ion diagnostics and report
-> integration, the dependency-free traceable Cs calibration/hold-out gate, and
-> the separate EPA/Fuller/Dubus external Cs benchmark registry.
-> The latest GitHub-hosted CI gate passed with `377 passed, 15 skipped`.
-> This is GitHub-hosted CI evidence. A **post-merge AMD/ROCm rerun of the full
-> current `main` tree** (5 August 2026) passed **388 tests,
-> 2 skipped** (external-PHREEQC only) under `artifacts/amd-2026-08-05/post-merge/`.
+> integration, the dependency-free traceable Cs calibration/hold-out gate,
+> the separate EPA/Fuller/Dubus external Cs benchmark registry, and the
+> review-hardening commits `3714bf8`/`1605cc6` (atomic session-memory rewrite,
+> free-text secret redaction, tightened calibration promotion gate).
+> The latest GitHub-hosted CI gate (run `31111109865`, head `df8f028`) passed
+> with `377 passed, 15 skipped`.
+> This is GitHub-hosted CI evidence. A **post-merge AMD/ROCm rerun of the `main`
+> tree at head `b6d4c61e74`** (5 August 2026) passed **388 tests,
+> 2 skipped** (external-PHREEQC only) under `artifacts/amd-2026-08-05/post-merge/`;
+> it predates the two review-hardening commits, which are covered by
+> GitHub-hosted CI only and do not touch the ROCm/FP64 numerical path.
 > The calibration-gate evidence remains historical non-runner evidence
 > for that specific gate.
 
@@ -62,7 +67,7 @@ The current model is a transparent screening prototype, not a regulatory or oper
 | Generation benchmark | `67.66 ± 0.14 tokens/s` at 128 tokens (`0.3` rerun) |
 | Full LLM-planned pipeline | `19.9692 s` for the verified `0.3` 128-sample AMD run; `0.0635364 s` deterministic offline baseline |
 
-The final AMD/ROCm **core-platform evidence snapshot** (28 July 2026) passed 231 tests. The exact FP64 device-resident GCS→transport→receptor pipeline evaluated 147,456 concentrations in a 1.784 ms median, 137.09× faster than the canonical scalar reference, with `7.94e-14` maximum relative concentration error. The dependency-light controller gate was 216 pass/13 optional-PyTorch skips; the controller with CPU PyTorch passed 231. A **post-merge full-`main` AMD/ROCm rerun (5 August 2026) passed 388 tests, 2 skipped** (only the external-PHREEQC tests), with the FP64 platform benchmark reproducing 1.82 ms median / 132.8× / `7.94e-14` max error under `artifacts/amd-2026-08-05/post-merge/`. See [AMD platform benchmark](docs/AMD_PLATFORM_BENCHMARK.md) and [AMD LLM benchmark](docs/AMD_LLM_BENCHMARK.md).
+The final AMD/ROCm **core-platform evidence snapshot** (28 July 2026) passed 231 tests. The exact FP64 device-resident GCS→transport→receptor pipeline evaluated 147,456 concentrations in a 1.784 ms median, 137.09× faster than the canonical scalar reference, with `7.94e-14` maximum relative concentration error. The dependency-light controller gate was 216 pass/13 optional-PyTorch skips; the controller with CPU PyTorch passed 231. A **post-merge AMD/ROCm rerun of `main` at head `b6d4c61e74` (5 August 2026) passed 388 tests, 2 skipped** (only the external-PHREEQC tests), with the FP64 platform benchmark reproducing 1.82 ms median / 132.8× / `7.94e-14` max error under `artifacts/amd-2026-08-05/post-merge/`. See [AMD platform benchmark](docs/AMD_PLATFORM_BENCHMARK.md) and [AMD LLM benchmark](docs/AMD_LLM_BENCHMARK.md).
 
 ## Architecture
 
@@ -107,11 +112,18 @@ nuclear-emergency-demo \
   --session-id offline-demo
 ```
 
-Latest code-bearing registry check (GitHub-hosted CI):
+Latest code-bearing check (GitHub-hosted CI run
+[31111109865](https://github.com/anakinsuper/NuclidePath/actions/runs/31111109865),
+head `df8f028`):
 
 ```text
-373 passed, 15 skipped (external Cs registry integration)
+377 passed, 15 skipped (review hardening: atomic memory rewrite, free-text secret redaction)
 ```
+
+The preceding review-hardening checkpoint `3714bf8` passed 376 tests, 15 skipped.
+
+The preceding external Cs registry checkpoint (PR #24, run `30993946602`):
+373 passed, 15 skipped.
 
 The preceding calibration/hold-out gate:
 370 passed, 15 skipped.

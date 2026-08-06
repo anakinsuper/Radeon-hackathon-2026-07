@@ -1,11 +1,12 @@
 # NuclidePath current release state
 
-**Updated:** 5 August 2026  
-**Repository:** `anakinsuper/NuclidePath`  
-**Default branch:** `main`  
-**Latest code-bearing `main` checkpoint:** PR #24 registry merge `2b256e322eaa8ca45a5b939fdecad09d66019b0c` (PR head `58656141db4a3a17d49a7e0a2f9ffda20f434130`); the post-merge AMD/ROCm evidence commit `c05d13afbf` is documentation/evidence only and does not change the reviewed code path.
-**Documentation-only synchronization follows the last code-bearing checkpoint; fetch `main` directly for the current documentation HEAD.**
-**Artifact-generation source checkpoint:** `a94c76ee078a7bd24feb98965a6682a274781deb` (PR #10 documentation sync)
+- **Updated:** 6 August 2026
+- **Repository:** `anakinsuper/NuclidePath`
+- **Default branch:** `main`
+- **Latest code-bearing `main` checkpoint:** review-hardening commit `1605cc6` (atomic memory rewrite, free-text secret redaction, editorial CI gate), preceded by review-hardening commit `3714bf8` (oracle row binding, report numeric-finiteness gate, calibration promotion-gate tightening). Both landed directly on `main` on 6 August 2026 and are covered by GitHub-hosted CI runs `31098025767` and `31093247490`; the current `main` head `df8f028` passed run `31111109865` with `377 passed, 15 skipped`.
+- **Preceding code-bearing checkpoint:** PR #24 registry merge `2b256e322eaa8ca45a5b939fdecad09d66019b0c` (PR head `58656141db4a3a17d49a7e0a2f9ffda20f434130`); the post-merge AMD/ROCm evidence commit `c05d13afbf` is documentation/evidence only and does not change the reviewed code path.
+- **Documentation-only synchronization follows the last code-bearing checkpoint; fetch `main` directly for the current documentation HEAD.**
+- **Artifact-generation source checkpoint:** `a94c76ee078a7bd24feb98965a6682a274781deb` (PR #10 documentation sync)
 
 This file is the compact cross-document release record. `WORK_HANDOFF.md`
 contains operational continuity; this file records which claims are current,
@@ -27,7 +28,13 @@ The verified `main` state contains:
 - the dependency-free traceable Cs exchange calibration/hold-out gate, implemented
   offline with fail-closed promotion and no bundled experimental data.
 
-The latest code-validation checkpoint is PR #22 head
+The latest code-validation checkpoint is the current `main` head `df8f028`, whose
+GitHub-hosted CI run [31111109865](https://github.com/anakinsuper/NuclidePath/actions/runs/31111109865)
+passed with `377 passed, 15 skipped`, workflow policy PASS, Python compilation PASS,
+wheel PASS, editorial toolchain PASS and whitespace PASS. It covers the two
+review-hardening commits `3714bf8` (376 passed) and `1605cc6` (377 passed).
+
+The preceding code-validation checkpoint is PR #22 head
 `f74943ed12b07080578536e3d8deb0f3831ad310`, merged as
 `7c4079ad84812164a4bfd3f4f7b8f24c6708f41b`. Its GitHub-hosted calibration-gate
 CI run [30936374478](https://github.com/anakinsuper/NuclidePath/actions/runs/30936374478)
@@ -70,9 +77,9 @@ snapshot: source revision `5edb8ce24b690810efad703f7550650192598118`, ROCm
 It predates the PHREEQC documentation/bridge merges and is retained as the
 historical core-platform snapshot.
 
-A **post-merge AMD/ROCm rerun of the full current `main` tree** was executed on
-2026-08-05 under `artifacts/amd-2026-08-05/post-merge/`: source head
-`b6d4c61e74`, ROCm 7.2.1 (HIP `7.2.53211-e1a6bc5663`), torch `2.9.1+gitff65f5b`,
+A **post-merge AMD/ROCm rerun of the `main` tree at head `b6d4c61e74`** was executed
+on 2026-08-05 under `artifacts/amd-2026-08-05/post-merge/`: ROCm 7.2.1
+(HIP `7.2.53211-e1a6bc5663`), torch `2.9.1+gitff65f5b`, Python 3.12.3,
 gfx1100, 51.5 GB VRAM. The complete suite passed **388 tests, 2 skipped**
 (the 2 skips are the external-PHREEQC tests requiring the real solver, not
 AMD-related). All 13 PyTorch/ROCm tests that are skipped in the dependency-light
@@ -82,12 +89,21 @@ relative error, 81.1 M evaluations/s. Primary-GCS batch: 4.88× speedup,
 4.44e-16 maximum relative error. SHA-256 digests are recorded in
 `SHA256SUMS` inside that directory.
 
+This AMD rerun predates the two review-hardening commits `3714bf8` and `1605cc6`.
+Those commits are covered by GitHub-hosted CI only (run `31111109865`, 377 passed,
+15 skipped); they were not re-run on the AMD workspace. They touch the arithmetic
+oracle, report safety gate, calibration promotion gate, session memory and
+redaction policy — none of which is part of the ROCm/FP64 numerical path measured
+by the benchmark above, so the reported AMD performance figures remain applicable.
+
 The latest core test counts are:
 
+- **current `main` head `df8f028`: 377 passed, 15 skipped (run `31111109865`)**;
+- review-hardening checkpoint `3714bf8`: 376 passed, 15 skipped (run `31093247490`);
 - dependency-light controller: 216 passed, 13 optional-PyTorch skips;
 - controller with PyTorch: 231 passed;
 - AMD ROCm core snapshot (28 July): 231 passed;
-- **AMD ROCm full current-`main` post-merge rerun (5 August): 388 passed, 2 skipped** (external-PHREEQC only);
+- **AMD ROCm post-merge rerun of `main` at `b6d4c61e74` (5 August): 388 passed, 2 skipped** (external-PHREEQC only);
 - merged multicomponent bridge integration gate: 364 passed, 15 skipped (run `30928408962`);
 - non-runner calibration/hold-out gate integration: 370 passed, 15 skipped (run `30936374478`);
 - external Cs registry integration: 373 passed, 15 skipped (run `30993946602`).
@@ -100,7 +116,9 @@ checkpoint explicitly named in those documents.
 The private source repository is not judge-accessible by itself. The prepared
 public contest-fork branch
 `anakinsuper/Radeon-hackathon-2026-07:submission/track2-physics-first-ai-nuclidepath`
-is synchronized to the current `main` documentation head `1605cc6` (code-bearing
+tracks `main` and was last verified byte-identical to `main` head `df8f028` on
+6 August 2026 (source copy differs only by the excluded `.hermes/` planning
+directory). It must be re-synchronized whenever `main` moves. Preceding code-bearing
 checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24). Its contest
 package now contains the complete current source under
 `submissions/Track2-Physics-First-AI-NuclidePath/source/`, the updated
@@ -139,4 +157,4 @@ When source or evidence changes:
 
 ## Current PR #24 registry checkpoint
 
-PR #24 added the separate EPA/Fuller/Dubus external Cs benchmark registry. It merged into `main` as `2b256e322eaa8ca45a5b939fdecad09d66019b0c`; its GitHub-hosted CI run `30993946602` passed with `373 passed, 15 skipped`, including workflow policy, compilation, wheel and whitespace checks. This is not a trusted self-hosted PHREEQC run, an AMD post-merge rerun, or scientific calibration evidence.
+PR #24 added the separate EPA/Fuller/Dubus external Cs benchmark registry. It merged into `main` as `2b256e322eaa8ca45a5b939fdecad09d66019b0c`; its GitHub-hosted CI run `30993946602` passed with `373 passed, 15 skipped`, including workflow policy, compilation, wheel and whitespace checks. This is not a trusted self-hosted PHREEQC run, an AMD post-merge rerun, or scientific calibration evidence. Two later review-hardening commits `3714bf8` and `1605cc6` landed directly on `main` on 6 August 2026 (oracle row binding, report numeric-finiteness gate, calibration promotion-gate tightening, atomic session-memory rewrite, free-text secret redaction, editorial CI gate). The current `main` head `df8f028` passed GitHub-hosted CI run `31111109865` with `377 passed, 15 skipped`.

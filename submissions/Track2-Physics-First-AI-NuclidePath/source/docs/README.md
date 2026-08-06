@@ -57,6 +57,36 @@ separate `NUMERICALLY VERIFIED` arithmetic evidence layer, but this does not
 establish experimental agreement, multi-cation Cs qualification, general PHREEQC
 compatibility, GCS equivalence, or regulatory validity.
 
+## Supporting modules without a dedicated document
+
+These modules are part of the shipped package and are covered by the test suite,
+but they support the contracts above rather than defining one of their own. They
+are listed here so the documented surface matches the delivered code.
+
+| Module | Purpose | Tests |
+|---|---|---|
+| `nuclear_agent.gpu_analysis` | Optional PyTorch backend for batched transport evaluation; falls back to the canonical scalar path when torch is absent | `tests/test_gpu_analysis.py` |
+| `nuclear_agent.gcs_primary_accelerated` | Exact batched PyTorch backend for the primary Bradbury GCS — an exact reformulation, not a learned approximation | `tests/test_gcs_primary_accelerated.py` |
+| `nuclear_agent.gcs_validation` | Source-faithful Bradbury (2000) validation scenarios and acceptance envelopes | `tests/test_gcs_validation.py` |
+| `nuclear_agent.likelihood` | Validated Gaussian and left-censored log-likelihoods; no sampler and no inference claim | `tests/test_phase_d2_d3.py` |
+| `nuclear_agent.recovery` | Deterministic bounded-grid parameter recovery, explicitly not a Bayesian posterior | `tests/test_phase_d2_d3.py` |
+| `nuclear_agent.model_selection` | Deterministic fail-closed model eligibility and selection behind the dashboard endpoint | `tests/test_phase_e4_dashboard.py` |
+| `nuclear_agent.observations` | Strict immutable ingestion of scientific observations | `tests/test_analytical_validation.py` |
+| `nuclear_agent.path_network` | Immutable acyclic directed 1-D segment networks | `tests/test_receptors.py` |
+| `nuclear_agent.replay_cli` | `nuclear-emergency-replay` entry point over the ReplayBundle contract | `tests/test_external_adapters.py` |
+
+The phase notes [PHASE_B.md](PHASE_B.md), [PHASE_C_SOURCE_AND_PATHS.md](PHASE_C_SOURCE_AND_PATHS.md),
+[PHASE_D2_D3.md](PHASE_D2_D3.md), [PHASE_E4_DASHBOARD.md](PHASE_E4_DASHBOARD.md) and
+[phase-e.md](phase-e.md) record how these increments were introduced. They are
+historical development records, not current contracts.
+
+## Reproducing the editorial package
+
+The deck, specification PDF, contact sheets and video assets are generated, not
+hand-authored. [`scripts/README.md`](../scripts/README.md) maps each script to the
+artifact it produces and lists the exact regeneration order. Every generated
+artifact is hash-tracked in `submission/ARTIFACT_MANIFEST.json`.
+
 ## AMD and local-AI evidence
 
 - [AMD environment](AMD_ENVIRONMENT.md)
@@ -76,8 +106,15 @@ external responsibilities unless a document explicitly defines otherwise.
 ## Demo and submission material
 
 - [Demo scenario and recording script](DEMO_SCENARIO.md)
-- [Final English video narration](VIDEO_NARRATION.md)
+- [Final English video narration](VIDEO_NARRATION.md) — the script matching the
+  recorded core video.
+- [Current narration appendix](VIDEO_NARRATION_CURRENT.md) — written updates that
+  are **not** footage in the recorded video.
+- [Hackathon setup and human gates](HACKATHON_SETUP.md)
 - [Official submission checklist](SUBMISSION_CHECKLIST.md)
+- [Private video deliverables](../private-deliverables/README.md) — video masters,
+  narration audio, subtitle tracks and their checksums, including which file is
+  the intended submission master.
 
 ## Documentation conventions
 

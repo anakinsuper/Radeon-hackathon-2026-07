@@ -257,7 +257,9 @@ PR #22 adds the non-runner calibration/hold-out infrastructure and its CI run
 [30936374478](https://github.com/anakinsuper/NuclidePath/actions/runs/30936374478)
 passed with 370 passed and 15 skipped. PR #24 subsequently added the separate
 external Cs benchmark registry; its CI run `30993946602` passed with 373
-passed and 15 skipped. This validates the software gate only;
+passed and 15 skipped. The later review-hardening commits `3714bf8` and
+`1605cc6` brought the current `main` head `df8f028` to run `31111109865` with
+377 passed and 15 skipped. This validates the software gate only;
 without an authorized measured dataset it does not qualify Cs chemistry or
 promote the global PHREEQC verdict.
 

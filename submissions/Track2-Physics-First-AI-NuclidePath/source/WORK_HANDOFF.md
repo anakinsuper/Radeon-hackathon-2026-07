@@ -1,6 +1,6 @@
 # NuclidePath work handoff
 
-Updated: 2026-08-05
+Updated: 2026-08-06
 
 Read this file first when resuming the project in a new ChatGPT Work session.
 GitHub remote state is the source of truth; verify it before acting.
@@ -25,6 +25,8 @@ GitHub remote state is the source of truth; verify it before acting.
 - PRs #16–#21: **closed and merged** on 2026-08-04; documentation-only release-state synchronizations.
 - PR #22: **closed and merged** on 2026-08-04; dependency-free traceable Cs calibration/hold-out gate merge commit `7c4079ad84812164a4bfd3f4f7b8f24c6708f41b`.
 - PR #24: **closed and merged** on 2026-08-05; external Cs benchmark registry merge commit `2b256e322eaa8ca45a5b939fdecad09d66019b0c`; CI `30993946602` passed with `373 passed, 15 skipped`.
+- PR #25: **closed and merged** on 2026-08-05; submission-state synchronization after the registry merge.
+- Review-hardening commits `3714bf8` (376 passed) and `1605cc6` (377 passed) landed directly on `main` on 2026-08-06 without a pull request. Current `main` head `df8f028`; CI run `31111109865` passed with `377 passed, 15 skipped`.
 - Historical science branch: `science/numeric-oracle-2026-08-04`; its reviewed content is now in `main`.
 
 Before the external-benchmark registry work, the last code-bearing `main`
@@ -96,8 +98,9 @@ The documentation/submission synchronization PR #11 CI run was:
 - Whitespace check: successful
 
 PR #11 also regenerated the current internal deck, specification PDF, contact
-sheets and video cards; `submission/ARTIFACT_MANIFEST.json` records 16 tracked
-artifact hashes. The visual package is intentionally core-path evidence and
+sheets and video cards; `submission/ARTIFACT_MANIFEST.json` recorded 16 tracked
+artifact hashes **at that PR #11 checkpoint**; the manifest has since grown and
+currently tracks 22 artifacts. The visual package is intentionally core-path evidence and
 does not show or claim a trusted PHREEQC multicomponent run.
 
 Independent final review also verified the real PHREEQC test as
@@ -222,10 +225,10 @@ the checkpoint they support.
 ## Next project gate
 
 The private documentation, submission package and non-runner PHREEQC remediation are synchronized in `main`; documentation-only merges after PR #22 do not change the reviewed code path. Fetch `main` directly for the current state.
-A **post-merge AMD/ROCm rerun of the full current `main` tree** was executed on 2026-08-05 on the AMD workspace (gfx1100, ROCm 7.2.1, torch `2.9.1+gitff65f5b`, head `b6d4c61e74`): **388 passed, 2 skipped** (only the external-PHREEQC solver tests), with the FP64 platform benchmark reproducing 1.82 ms median / 132.8× / 7.94e-14 max error. Evidence under `artifacts/amd-2026-08-05/post-merge/` with SHA256SUMS.
+A **post-merge AMD/ROCm rerun of the `main` tree at head `b6d4c61e74`** was executed on 2026-08-05 on the AMD workspace (gfx1100, ROCm 7.2.1, torch `2.9.1+gitff65f5b`, head `b6d4c61e74`): **388 passed, 2 skipped** (only the external-PHREEQC solver tests), with the FP64 platform benchmark reproducing 1.82 ms median / 132.8× / 7.94e-14 max error. Evidence under `artifacts/amd-2026-08-05/post-merge/` with SHA256SUMS.
 The public contest-fork branch
 `submission/track2-physics-first-ai-nuclidepath` was synchronized on 2026-08-05
-to the current `main` documentation head `1605cc6` (latest documentation head
+to `main` (verified byte-identical to head `df8f028` on 2026-08-06; re-sync required after any further `main` change) (latest documentation head
 including the deck multicomponent bridge card and the spec cover multicomponent
 note; code-bearing checkpoint
 `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24): the complete current

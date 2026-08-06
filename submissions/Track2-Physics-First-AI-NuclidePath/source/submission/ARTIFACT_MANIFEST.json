@@ -12,13 +12,13 @@
   "artifacts": [
     {
       "path": "submission/NuclidePath_Track2_Deck.pptx",
-      "bytes": 757323,
-      "sha256": "a5c80475da745a6f9785488e4a78a8e971a0d78ead444eb0acc0a6c0ab07fd32"
+      "bytes": 757512,
+      "sha256": "600d40ec7ab9e87298b462604d76271f5d9b259e5e8e28940099bad7098485cf"
     },
     {
       "path": "submission/NuclidePath_Project_Specification.pdf",
-      "bytes": 241714,
-      "sha256": "16f61e19500e80f091f38eb359ca7884891fc4b73d1a673a88320753c3f2d605"
+      "bytes": 291591,
+      "sha256": "968a6c7e0c28bbd095fa0814e43bbf6d90cf8ed0e6b342aaf0cb16bc47952f7c"
     },
     {
       "path": "docs/assets/architecture.svg",
@@ -37,18 +37,18 @@
     },
     {
       "path": "docs/assets/deck-contact.png",
-      "bytes": 210706,
-      "sha256": "c1b301c7a2a717688cb69708921ca633dccf0462496be938b06675a00af6d4ea"
+      "bytes": 216960,
+      "sha256": "1b468dfb5ccbd92e34f806a971275b9b42ee25bd729924c0db91a9830d1a92d0"
     },
     {
       "path": "docs/assets/spec-contact.png",
-      "bytes": 626858,
-      "sha256": "c6a8df40012cae77bf99e3becc0127dfa896c458fb4b5e24738659fb022cca48"
+      "bytes": 647375,
+      "sha256": "3ee372f2306769b9e7f536bca7fc416397330c073be184fb857808d77f852c39"
     },
     {
       "path": "docs/assets/video-contact.png",
-      "bytes": 385012,
-      "sha256": "aab5898be47dcf798341dd8f6af40a290fbcc51e21e4f766422335672359e690"
+      "bytes": 139648,
+      "sha256": "f8e791bafb44b19e88fbca4114c4d3218764cba660d6a43822be9af0424dfe13"
     },
     {
       "path": "artifacts/amd-2026-07-28/platform-current/preflight.txt",
@@ -62,8 +62,8 @@
     },
     {
       "path": "private-deliverables/current-video-assets/slide-01.png",
-      "bytes": 54580,
-      "sha256": "f991cbdab2d9b2e44ef262381d94f01a77c4a5f4ff8233f40849b74d58012f2f"
+      "bytes": 54524,
+      "sha256": "62b3df2309005f51650177096b5988667c134dc0dd51848ac2b98f53b260666e"
     },
     {
       "path": "private-deliverables/current-video-assets/slide-03.png",
@@ -82,8 +82,8 @@
     },
     {
       "path": "private-deliverables/current-video-assets/slide-08.png",
-      "bytes": 81694,
-      "sha256": "263aaa03a6b3aeacb03ac0a2e99544506f5a09d68fec4a0b2b6498b895b45e1d"
+      "bytes": 81678,
+      "sha256": "8ff8f45b3f256068f320a7edd36c394a318ac8f23e96e1e05bcbd670129b1476"
     },
     {
       "path": "private-deliverables/current-video-assets/slide-09.png",
@@ -117,8 +117,8 @@
     },
     {
       "path": "submission/NuclidePath_Track2_Deck.pdf",
-      "bytes": 481532,
-      "sha256": "5acea74e7a1f5e87a2f2aa415959fedd0cebd74b6b56e1be36069b90d6940ae8"
+      "bytes": 477675,
+      "sha256": "8488e9ca821333d49f900b31a1f7fdb4019d9d97b3b0dbd9e0563030d65d6b51"
     }
   ],
   "source_context": {
@@ -127,8 +127,8 @@
     "default_branch": "main",
     "current_feature_state": "PHREEQC schema 2 multicomponent bridge with independent arithmetic oracle, K-free Na-Ca-Mg fixtures and dependency-free traceable Cs calibration/hold-out gate; canonical transport unchanged; separate EPA/Fuller/Dubus external Cs benchmark registry with calibration_eligible=false",
     "visual_package_scope": "core Track 2 evidence; current video does not show the optional PHREEQC bridge",
-    "public_contest_branch_source_release": "1605cc6 (current main documentation head, includes review-hardening fixes;, includes review-hardening fixes;, includes deck multicomponent-bridge card and spec cover multicomponent note; code-bearing checkpoint 2b256e322eaa8ca45a5b939fdecad09d66019b0c)",
-    "public_contest_branch_status": "synchronized to current main source release; complete source copied into contest package under submissions/Track2-Physics-First-AI-NuclidePath/source/; contest-local manifest v2.0; public video URL pending; source copy at 1605cc6",
+    "public_contest_branch_source_release": "df8f028 (current main head: docs-align commit completing the 377/15 review-hardening release; includes deck multicomponent-bridge card, spec cover multicomponent note, 132.8x post-merge AMD figure, regenerated PDF/deck/contact sheets; code-bearing checkpoint 2b256e322eaa8ca45a5b939fdecad09d66019b0c)",
+    "public_contest_branch_status": "synchronized to current main source release; complete source copied into contest package under submissions/Track2-Physics-First-AI-NuclidePath/source/; contest-local manifest v2.0; public video URL pending; source copy at df8f028",
     "artifact_generation_base": "a94c76ee078a7bd24feb98965a6682a274781deb",
     "current_main_head_policy": "fetch refs/heads/main directly; documentation-only merges may advance the branch",
     "last_code_bearing_main_checkpoint": "2b256e322eaa8ca45a5b939fdecad09d66019b0c (PR #24 merge; PR head 58656141db4a3a17d49a7e0a2f9ffda20f434130; fetch refs/heads/main directly for current documentation HEAD)",

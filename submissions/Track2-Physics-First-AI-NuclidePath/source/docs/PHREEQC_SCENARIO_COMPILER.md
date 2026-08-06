@@ -236,7 +236,7 @@ report bridge are included in merged PR #15. Final integration CI run
 wheel and whitespace checks also passed. PR #22 subsequently added the
 non-runner calibration/hold-out gate; its CI run `30936374478` passed with 370
 passed and 15 skipped. PR #24 then added the separate external Cs benchmark
-registry; run `30993946602` passed with 373 passed and 15 skipped.
+registry; run `30993946602` passed with 373 passed and 15 skipped. The current `main` head `df8f028` passed run `31111109865` with 377 passed and 15 skipped, after the review-hardening commits `3714bf8` and `1605cc6`.
 The current change set was then exercised against the pinned PHREEQC installation
 locally, using release asset `3.9.0-17591` (banner `PHREEQC 3.8.9, October 13,
 2025`) and database SHA-256 `5b80d45c989cd1db7aab485e198321ba550d5902be8097c8be26d85ba03da278`.

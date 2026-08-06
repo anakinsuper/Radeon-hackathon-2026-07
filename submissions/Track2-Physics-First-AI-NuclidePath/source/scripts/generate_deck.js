@@ -43,7 +43,7 @@ function notes(slide,body){ slide.addNotes(body); }
  text(s,'PHYSICS-FIRST AI',0.72,6.55,3.4,0.28,12,C.text,{bold:true}); text(s,'Stefano Rigante · Nuclear engineer',0.72,6.86,3.8,0.24,10,C.muted);
  s.addImage({path:asset('dashboard.png'),x:5.48,y:0.62,w:7.35,h:4.60,altText:'NuclidePath verified local dashboard'});
  rect(s,5.48,5.25,7.35,1.27,C.layer,C.line);
- stat(s,5.77,5.46,2.0,'5/5','Track 2 capabilities',C.green); stat(s,8.15,5.46,2.0,'231','AMD core snapshot',C.blue); stat(s,10.45,5.46,2.0,'377/15','latest PR gate',C.orange);
+ stat(s,5.77,5.46,2.0,'5/5','Track 2 capabilities',C.green); stat(s,8.15,5.46,2.0,'231','AMD core snapshot',C.blue); stat(s,10.45,5.46,2.0,'377/15','latest CI gate',C.orange);
  notes(s,'Open with the core promise: AI coordinates the workflow, but deterministic code owns every physical number.');
 }
 
@@ -163,12 +163,12 @@ function notes(slide,body){ slide.addNotes(body); }
  rect(s,7.55,0.72,5.08,5.98,C.layer,C.line);
  text(s,'The proof',7.95,1.10,2.0,0.36,20,C.text,{bold:true});
  stat(s,7.95,1.78,2.0,'5/5','Track 2 capabilities',C.green); stat(s,10.27,1.78,1.85,'388','AMD tests (post-merge)',C.blue);
- stat(s,7.95,3.05,2.0,'137.09×','FP64 platform',C.orange); stat(s,10.27,3.05,1.85,'0','cloud calls',C.purple);
+ stat(s,7.95,3.05,2.0,'132.8×','FP64 platform (post-merge)',C.orange); stat(s,10.27,3.05,1.85,'0','cloud calls',C.purple);
  text(s,'Track 2 · Physics-First AI · NuclidePath',7.95,4.58,4.0,0.35,15,C.text,{bold:true});
  text(s,'Official AMD Track 2 PR package',7.95,5.15,4.0,0.32,12,C.blue,{fontFace:'Liberation Mono'});
  pill(s,7.95,5.80,2.05,'TECHNICAL BUILD VERIFIED',C.green);
  text(s,'THANK YOU',0.72,6.65,2.2,0.32,11,C.muted,{charSpacing:2});
- notes(s,'Close on current evidence: local, tested, reproducible and honest about scope. The 137.09× result is the measured device-resident FP64 primary-GCS to receptor pipeline versus the scalar reference, not environmental validation.');
+ notes(s,'Close on current evidence: local, tested, reproducible and honest about scope. The 132.8× result is the measured device-resident FP64 primary-GCS to receptor pipeline versus the scalar reference, reproduced in the 5 August post-merge AMD rerun alongside the 388 passing tests (the 28 July core snapshot measured 137.09× on the same pipeline). This is a performance result, not environmental validation.');
 }
 
 require('fs').mkdirSync(path.dirname(out),{recursive:true});

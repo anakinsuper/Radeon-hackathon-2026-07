@@ -106,13 +106,14 @@ All physical values are produced by a deterministic, versioned tool; the local L
 
 Before PR submission, confirm:
 
-- [x] contest fork branch exists and is synchronized to current `main` documentation head `1605cc6` (code-bearing checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c`); complete source copied under `submissions/Track2-Physics-First-AI-NuclidePath/source/` with contest-local manifest v2.0;
-- [ ] contest fork package synchronized with current `main`; complete source copied under the contest submission directory;
+- [x] contest fork branch exists and is synchronized to current `main`; complete source copied under `submissions/Track2-Physics-First-AI-NuclidePath/source/` with contest-local manifest v2.0;
 - [ ] Luma registration approved;
 - [ ] AMD Developer Program membership active;
 - [ ] final video URL is public or judge-accessible;
 - [x] complete source is judge-accessible because the current source is copied into the contest submission;
-- [ ] no personal secrets or SSH keys are tracked;
+- [x] no personal secrets or SSH keys are tracked (verified 6 August 2026: no keys,
+      tokens or credentials in any tracked file; the only match is a synthetic
+      redaction fixture in `tests/test_security_memory.py`);
 - [ ] final PR title is exact;
 - [ ] PR opened before the official deadline;
 - [x] publication/copy of the complete current source authorized by the participant.

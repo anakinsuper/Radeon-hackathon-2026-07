@@ -5,7 +5,7 @@
 **Application:** NuclidePath  
 **Required PR title:** `Track 2, Physics-First AI, NuclidePath`  
 **Deadline:** 6 August 2026, 17:59 CEST  
-**Last synchronized:** 5 August 2026
+**Last synchronized:** 6 August 2026
 **Current `main` review head:** fetch `main` directly; this checklist intentionally does not pin documentation-only merge commits.
 
 This checklist distinguishes verified repository evidence from actions that
@@ -44,6 +44,8 @@ require the participant's explicit publication or eligibility decision.
       `30936374478`, 370 passed/15 skipped, policy/wheel/whitespace PASS.
 - [x] Latest code-bearing registry integration: PR #24 run
       `30993946602`, 373 passed/15 skipped, policy/wheel/whitespace PASS.
+- [x] Current `main` head `df8f028` after review-hardening commits `3714bf8`/`1605cc6`:
+      run `31111109865`, 377 passed/15 skipped, policy/wheel/editorial/whitespace PASS.
 - [x] Official PHREEQC Example 2 process qualification is recorded.
 - [ ] Trusted real PHREEQC projection of both multicomponent cases on `main`.
 - [x] Independent arithmetic oracle for the declared bridge contract is
@@ -71,7 +73,7 @@ require the participant's explicit publication or eligibility decision.
 
 - [x] AMD core-platform snapshot (28 July): 231 tests, exact FP64 parity and recorded
       ROCm/model/source hashes.
-- [x] Post-merge AMD/ROCm rerun of full current `main` (5 August): 388 passed,
+- [x] Post-merge AMD/ROCm rerun of `main` at head `b6d4c61e74` (5 August): 388 passed,
       2 skipped (external-PHREEQC only), FP64 benchmark reproduced; evidence under
       `artifacts/amd-2026-08-05/post-merge/`.
 - [x] Dependency-light controller checkpoint: 216 passed/13 optional-PyTorch
@@ -91,7 +93,7 @@ require the participant's explicit publication or eligibility decision.
 - [x] Public contest fork and prepared branch exist; contest artifacts are under
       `submissions/Track2-Physics-First-AI-NuclidePath/`.
 - [x] Prepared contest branch synchronized with current `main` documentation head
-      `1605cc6` (code-bearing checkpoint `2b256e322eaa8ca45a5b939fdecad09d66019b0c` from PR #24);
+      `df8f028` (verified byte-identical on 6 August 2026; re-sync required after any further `main` change);
       its contest-local manifest is `nuclidepath-contest-manifest-2.0`.
 - [x] Complete current source copied to the contest submission under
       `submissions/Track2-Physics-First-AI-NuclidePath/source/`.

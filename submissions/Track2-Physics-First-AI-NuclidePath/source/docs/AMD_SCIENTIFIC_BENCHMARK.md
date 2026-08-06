@@ -1,6 +1,6 @@
 # AMD ROCm scientific transport benchmark
 
-**Scope note:** this is the dated 28 July 2026 core-platform snapshot. It predates the multicomponent PHREEQC bridge merge; the **5 August 2026 post-merge full-`main` rerun** (388 passed, 2 skipped) is archived under `artifacts/amd-2026-08-05/post-merge/`.
+**Scope note:** this is the dated 28 July 2026 core-platform snapshot. It predates the multicomponent PHREEQC bridge merge; the **5 August 2026 post-merge rerun of `main` at head `b6d4c61e74`** (388 passed, 2 skipped) is archived under `artifacts/amd-2026-08-05/post-merge/`.
 
 ## Scope
 
